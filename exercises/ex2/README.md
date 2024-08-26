@@ -34,6 +34,12 @@ So let's do that.
         description = "The subaccount name."
         default     = "TechEd2024-experiments"
       }
+
+      variable "region" {
+        type        = string
+        description = "The region where the subaccount shall be created in."
+        default     = "us10"
+      }
       ```
 
       It is best practice to provided a meaningful description for the variables. As you can see we also provided default values for the variables. Feel free to change them to your liking. Safe your changes once you are finished.
@@ -59,7 +65,7 @@ So let's do that.
 1. With this we can continue to define the actual subaccount resource. Add the following code to the `main.tf` file:
 
     ```terraform
-    resource "btp_subaccount" "my" {
+    resource "btp_subaccount" "sa_build" {
       name      = var.subaccount_name
       subdomain = local.subaccount_domain
       region    = lower(var.region)
@@ -68,7 +74,7 @@ So let's do that.
 
     We are using the variables we defined before and the local variable to fill the required parameters of the resource. We are also using the `lower` function inline to ensure that the region is always in lowercase.
 
-    Safe your changes, as we can now give the configuration a try.
+    Safe your changes.
 
 ## Exercise 2.2 - Execute Terraform
 
@@ -82,28 +88,22 @@ After completing these steps you will have executed the Terraform configuration 
 
     This will initialize the setup and download the required provider. You can also check your file system to see that a `.terraform` directory has been created.
 
-2. Next we want to check what Terraform will do when we apply the configuration. We do so via the command
-
-    ```bash
-    terraform plan
-    ```
-
-    This will show you what Terraform will do if we would apply the configuration. This step is important to validate if the configuration is acting as expected. We will also save the plan to a file for using it later. Execute the following command:
+1. Next we execute another planning:
 
     ```bash
     terraform plan -out=tfplan
     ```
 
-    You should see that Terraform would create a subaccount with the parameters you provided. This looks good, so let us apply the plan via:
+    As expected the new resources get created, while the previously created subaccount remains untouched. We again save the plan to a file for using it later. If the result matches our expectations we can apply the configuration:
 
     ```bash
     terraform apply tfplan
     ```
 
-    As a result you see in the output that Terraform is creating the subaccount. You can also check the SAP BTP cockpit to see the subaccount being created.
+    As a result you see that Terraform created the resources. As we specified dedicated output variables we also see them as separate section at the end of the output from the Terraform CLI.
 
 ## Summary
 
-You've now made the first step in defining your SAP BTP infrastructure as Code namely the creation of a subaccount. 
+You've now made the first step in defining your SAP BTP infrastructure as Code namely the creation of a subaccount.
 
 Continue to - [Exercise 3 - Setup of SAP Build Code](../ex3/README.md)
