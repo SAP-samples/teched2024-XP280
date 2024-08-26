@@ -10,7 +10,7 @@ locals {
 # ------------------------------------------------------------------------------------------------------
 # Creation of subaccount
 # ------------------------------------------------------------------------------------------------------
-resource "btp_subaccount" "my" {
+resource "btp_subaccount" "sa_build" {
   name      = var.subaccount_name
   subdomain = local.subaccount_domain
   region    = lower(var.region)
@@ -22,9 +22,7 @@ resource "btp_subaccount" "my" {
 module "build_code" {
   source = "./modules/build_code/"
 
-  subaccount_id  = btp_subaccount.my.id
-  globalaccount  = var.globalaccount
-  cli_server_url = var.cli_server_url
+  subaccount_id  = btp_subaccount.sa_build.id
 
   application_studio_admins             = var.application_studio_admins
   application_studio_developers         = var.application_studio_developers
@@ -40,9 +38,7 @@ module "build_code" {
 module "build_process_automation" {
   source = "./modules/build_process_automation"
 
-  subaccount_id  = btp_subaccount.my.id
-  globalaccount  = var.globalaccount
-  cli_server_url = var.cli_server_url
+  subaccount_id  = btp_subaccount.sa_build.id
 
   process_automation_admins       = var.process_automation_admins
   process_automation_developers   = var.process_automation_developers

@@ -1,27 +1,6 @@
-# The subdomain of your trial account
-variable "globalaccount" {
-  type    = string
-  default = "xxxxxxxxtrial-ga"
-}
-
-# subaccount id
 variable "subaccount_id" {
   type        = string
   description = "The subaccount ID."
-  default     = ""
-}
-
-variable "cli_server_url" {
-  type        = string
-  description = "Defines the CLI server URL"
-  default     = "https://cli.btp.cloud.sap"
-}
-
-# Region
-variable "region" {
-  type        = string
-  description = "The region where the project account shall be created in."
-  default     = "us10"
 }
 
 variable "subaccount_admins" {
