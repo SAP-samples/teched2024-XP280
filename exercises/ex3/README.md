@@ -2,6 +2,8 @@
 
 In this exercise, we will enhance the existing configuration to setup SAP Build Code leveraging a Terraform module.
 
+> **Note** - You can find the solution for this exercise in the [solutions/ex3](../../solutions/ex3/) folder.
+
 ## Exercise 3.1 - Become familiar with the SAP Build Code module
 
 After completing these steps you will know how the module for SAP Build Code is structured.
@@ -14,7 +16,7 @@ The setup of SAP Build Code consists of several components:
 
 That is quite a lot of stuff to do. In addition this bits and pieces will always be the same when you want to setup Build Code in a new subaccount. We certainly do not want to copy&paste these steps in our configurations, so is there another way to do this? Yes there is: Terraform provides a feature that allows you to define reusable blocks of configuration that can be called from multiple places. These reusable blocks are called [modules](https://developer.hashicorp.com/terraform/language/modules).
 
-To make your life easier we already created such a module for the setup of SAP Build Code comprising the components mentioned above. You find this module in the folder `code\module\build_code`. Let us take a look at the structure of this module. The layout in the file system is as follows:
+To make your life easier we already created such a module for the setup of SAP Build Code comprising the components mentioned above. You find this module in the folder `modules/build_code`. Let us take a look at the structure of this module. The layout in the file system is as follows:
 
 - `build_code_variables.tf`
 - `build_code.tf`
@@ -62,7 +64,7 @@ As we have a good impression on what the module does, let us integrate it into o
 
 After completing these steps you will have enhanced the configuration to create SAP Build code in your subaccount.
 
-To do so Terraform provides the [module block](https://developer.hashicorp.com/terraform/language/modules/syntax) that allows us to specifiy a module including its location and the parameters it expects. In our case the module is local so provide the path to the module folder.
+To do so Terraform provides the [module block](https://developer.hashicorp.com/terraform/language/modules/syntax) that allows us to specify a module including its location and the parameters it expects. In our case the module is local so provide the path to the module folder.
 
 Besides that we need to add the new variables for the user that should get the assignment of the role collections. Let's do this.
 
@@ -113,7 +115,7 @@ Besides that we need to add the new variables for the user that should get the a
 
    ```terraform
    module "build_code" {
-     source = "../code/modules/build_code/"
+     source = "../modules/build_code/"
    
      subaccount_id  = btp_subaccount.sa_build.id
    

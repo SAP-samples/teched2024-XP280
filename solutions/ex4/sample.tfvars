@@ -1,5 +1,5 @@
-globalaccount = "e698b433trial-ga"
-region        = "us10"
+# Subdomain of global account - format "xxxxxxxxtrial-ga"
+globalaccount = "<your-global-account-subdomain>"
 
 # users for SAP Build Code
 build_code_admins     = ["your.email@foo.xyz"]

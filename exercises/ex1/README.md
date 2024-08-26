@@ -2,6 +2,8 @@
 
 In this exercise, we will implement the basic Terraform configuration.
 
+> **Note** - You can find the solution for this exercise in the [solutions/ex1](../../solutions/ex1/) folder.
+
 ## Exercise 1.1 - Create the necessary files
 
 After completing these steps you will have created the file layout needed for the Terraform configuration.
@@ -55,7 +57,7 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
 1. As we do not want to hard code or default the value for the global account, we need to provide the value in the `terraform.tfvars` file. Open the file `terraform.tfvars` and add the following code:
 
     ```terraform
-    globalaccount = "<your-global-account>"
+    globalaccount = "<your-global-account-subdomain>"
     ```
 
     Enter the subdomain value of *your* global account which has the format `xxxxxxxxtrial-ga` and safe your changes

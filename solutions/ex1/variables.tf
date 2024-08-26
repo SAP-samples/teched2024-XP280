@@ -1,0 +1,3 @@
+variable "globalaccount" {
+  type    = string
+}
