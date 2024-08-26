@@ -1,4 +1,4 @@
-# Exercise 2 - Create a subaccount
+# Exercise 2 - Create a Subaccount
 
 In this exercise, we will use Terraform to create a subaccount in your global account.
 

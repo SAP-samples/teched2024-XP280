@@ -104,4 +104,4 @@ Validate that the values are set via:
 
 You've now prepared your development environment and have all information to finally start using Terraform provider for SAP BTP.  
 
-Continue to - [Exercise 1](../ex1/README.md).
+Continue to - [Exercise 1 - Setup Basics of Terraform Configuration](../ex1/README.md).

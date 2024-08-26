@@ -1,4 +1,4 @@
-# Exercise 1 - Setup Basic Terraform Configuration
+# Exercise 1 - Setup Basics of Terraform Configuration
 
 In this exercise, we will implement the basic Terraform configuration.
 
@@ -66,4 +66,4 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
 
 You've now finished the basic setup namely the provider configuration to start with the Terraform configuration for our desired setup.
 
-Continue to - [Exercise 2 - Create a subaccount](../ex2/README.md)
+Continue to - [Exercise 2 - Create a Subaccount](../ex2/README.md)
