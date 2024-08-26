@@ -21,8 +21,8 @@ After completing these steps you will have created the provider configuration.
 
 The basic configuration of the Terraform provider for SAP BTP is available in the official documentation located in the [Terraform registry](https://registry.terraform.io/providers/SAP/btp/latest/docs). Looking at the documentation we see that we need to tell Terraform which provider to use and how to authenticate against the SAP BTP. Let's do that
 
-1.	Open the file `provider.tf`.
-1.	Add the following code to the file and save the changes:
+1. Open the file `provider.tf`.
+1. Add the following code to the file and save the changes:
 
       ```terraform
       terraform {
@@ -60,4 +60,3 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
 You've now finished the basic setup namely the provider configuration to start with the Terraform configuration for our desired setup.
 
 Continue to - [Exercise 2 - Create a subaccount](../ex2/README.md)
-
