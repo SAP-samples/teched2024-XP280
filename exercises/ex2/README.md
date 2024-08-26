@@ -100,7 +100,7 @@ After completing these steps you will have executed the Terraform configuration 
     terraform apply tfplan
     ```
 
-    As a result you see that Terraform created the resources. As we specified dedicated output variables we also see them as separate section at the end of the output from the Terraform CLI.
+    As a result you see in the output that Terraform is creating the subaccount. You can also check the SAP BTP cockpit to see the resources being created.
 
 ## Summary
 

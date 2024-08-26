@@ -8,8 +8,8 @@ After completing these steps you will know how the module for SAP Build Code is 
 
 The setup of SAP Build Code consists of several components:
 
-- Assignment of the entitlement for SAP Build code and Business Application Studio (BAS) to the subaccount.
-- Subscription ro the SAP Build Code as well as to the BAS application.
+- Assignment of the entitlement for SAP Build Code and Business Application Studio (BAS) to the subaccount.
+- Subscription to the SAP Build Code as well as to the BAS application.
 - Assignment of the role collections to the users to access the applications.
 
 That is quite a lot of stuff to do. In addition this bits and pieces will always be the same when you want to setup Build Code in a new subaccount. We certainly do not want to copy&paste these steps in our configurations, so is there another way to do this? Yes there is: Terraform provides a feature that allows you to define reusable blocks of configuration that can be called from multiple places. These reusable blocks are called [modules](https://developer.hashicorp.com/terraform/language/modules).
@@ -130,15 +130,15 @@ Besides that we need to add the new variables for the user that should get the a
 
 1. As a final step we propagate the output of the module via the outputs of our configuration. Open the `outputs.tf` file and add the following code:
 
-    ```terraform
-    output "url_sap_build_code" {
-      value = module.build_code.url_sap_build_code
-    }
-    
-    output "url_sap_biz_app_studio" {
-      value = module.build_code.url_sap_biz_app_studio
-    }    
-    ```
+   ```terraform
+   output "url_sap_build_code" {
+     value = module.build_code.url_sap_build_code
+   }
+   
+   output "url_sap_biz_app_studio" {
+     value = module.build_code.url_sap_biz_app_studio
+   }    
+   ```
 
     This maps the output from the module to the output provided from our configuration. We will see the effect when executing the script. Safe your changes and let's give the enhanced configuration a try.
 
@@ -168,7 +168,7 @@ After completing these steps you will have executed the Terraform configuration 
     terraform apply tfplan
     ```
 
-    As a result you see in the output that Terraform is creating the subaccount. You can also check the SAP BTP cockpit to see the resources being created.
+    As a result you see that Terraform created the resources. As we specified dedicated output variables we also see them as separate section at the end of the output from the Terraform CLI.
 
 ## Summary
 
