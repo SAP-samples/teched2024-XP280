@@ -49,11 +49,16 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
     ```terraform
     variable "globalaccount" {
       type    = string
-      default = "SUBDOMAIN OF YOU GLOBAL ACCOUNT"
     }
     ```
 
-    As default value enter the subdomain value of *your* global account which has the format `xxxxxxxxtrial-ga`.
+1. As we do not want to hard code or default the value for the global account, we need to provide the value in the `terraform.tfvars` file. Open the file `terraform.tfvars` and add the following code:
+
+    ```terraform
+    globalaccount = "<your-global-account>"
+    ```
+
+    Enter the subdomain value of *your* global account which has the format `xxxxxxxxtrial-ga` and safe your changes
 
 ## Summary
 
