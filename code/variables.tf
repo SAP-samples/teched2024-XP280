@@ -64,5 +64,4 @@ variable "process_automation_developers" {
 variable "process_automation_participants" {
   type        = list(string)
   description = "Defines the users who have the role of ProcessAutomationParticipant in SAP Build Process Automation"
-  default     = ["jane.doe@test.com", "john.doe@test.com"]
 }

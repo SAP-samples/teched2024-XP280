@@ -6,6 +6,7 @@
 *.log
 secret.auto.tfvars
 terraform.tfvars
+tfplan
 
 
 # Any kind of invironment variables
