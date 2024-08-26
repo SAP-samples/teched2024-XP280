@@ -1,4 +1,3 @@
-# The subdomain of your trial account
 variable "globalaccount" {
   type    = string
   default = "xxxxxxxxtrial-ga"
@@ -10,15 +9,12 @@ variable "subaccount_domain_prefix" {
   default     = "TechEd2024-TF"
 }
 
-# subaccount id
 variable "subaccount_id" {
   type        = string
   description = "The subaccount ID."
   default     = ""
 }
 
-
-# subaccount name
 variable "subaccount_name" {
   type        = string
   description = "The subaccount name."
