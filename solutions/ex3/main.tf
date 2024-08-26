@@ -20,7 +20,7 @@ resource "btp_subaccount" "sa_build" {
 # Setup SAP Build Code
 # ------------------------------------------------------------------------------------------------------
 module "build_code" {
-  source = "./modules/build_code/"
+  source = "../../modules/build_code/"
 
   subaccount_id  = btp_subaccount.sa_build.id
 
@@ -30,17 +30,4 @@ module "build_code" {
 
   build_code_admins     = var.application_studio_admins
   build_code_developers = var.build_code_developers
-}
-
-# ------------------------------------------------------------------------------------------------------
-# Setup SAP Build Process Automation
-# ------------------------------------------------------------------------------------------------------
-module "build_process_automation" {
-  source = "./modules/build_process_automation"
-
-  subaccount_id  = btp_subaccount.sa_build.id
-
-  process_automation_admins       = var.process_automation_admins
-  process_automation_developers   = var.process_automation_developers
-  process_automation_participants = var.process_automation_participants
 }

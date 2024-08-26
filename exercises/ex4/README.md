@@ -2,6 +2,8 @@
 
 In this exercise, we will we will enhance the existing configuration to setup SAP Build Process Automation leveraging a Terraform module.
 
+> **Note** - You can find the solution for this exercise in the [solutions/ex4](../../solutions/ex4/) folder.
+
 ## Exercise 4.1 - Become familiar with the SAP Build Process Automation module
 
 After completing these steps you will know how the module for SAP Build Process Automation is structured.
@@ -12,7 +14,7 @@ As for the SAP Build Code scenario in the previous step, the setup comprises sev
 - Subscription to the SAP Build Process Automation application.
 - Assignment of the role collections to the users to access the application.
 
-As before we leverage a module for these tasks that is available in the folder `code\module\build_process_automation`. The structure an content corresponds to the previous exercise. Take a few minutes to review the files in the module. Use this a  knowledge check from the previous exercise.
+As before we leverage a module for these tasks that is available in the folder `modules/build_process_automation`. The structure an content corresponds to the previous exercise. Take a few minutes to review the files in the module. Use this a  knowledge check from the previous exercise.
 
 Once finished let us start to integrate the module into our main configuration.
 
@@ -57,7 +59,7 @@ After completing these steps you will have enhanced the configuration to setup S
 
    ```terraform
    module "build_process_automation" {
-     source = "../code/modules/build_process_automation"
+     source = "../modules/build_process_automation"
    
      subaccount_id  = btp_subaccount.sa_build.id
    
