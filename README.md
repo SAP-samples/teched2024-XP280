@@ -32,7 +32,7 @@ Make sure that the following prerequisites are met:
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Setup Basics of Terraform Configuration](exercises/ex1/)
 - [Exercise 2 - Create a Subaccount](exercises/ex2/)
-- [Exercise 3 - SSetup of SAP Build Code](exercises/ex3/)
+- [Exercise 3 - Setup of SAP Build Code](exercises/ex3/)
 - [Exercise 4 - Setup of SAP Build Process Automation](exercises/ex4/)
 
 ## Contributing
