@@ -1,44 +1,63 @@
-# Exercise 1 - Exercise 1 Description
+# Exercise 1 - Setup Basic Terraform Configuration
 
-In this exercise, we will create...
+In this exercise, we will implement the basic Terraform configuration.
 
-## Exercise 1.1 Sub Exercise 1 Description
+## Exercise 1.1 - Create the necessary files
 
-After completing these steps you will have created...
+After completing these steps you will have created the file layout needed for the Terraform configuration.
 
-1. Click here.
-<br>![](/exercises/ex1/images/01_01_0010.png)
+1. Go to the root directory of this project and create a new directory called `terraform-build`
+1. Switch into the newly created directory `terraform-build`.
+1. Create the following files inside of the directory:
+    - `main.tf` - this file will contain the main Terraform configuration
+    - `provider.tf` - this file will contain the provider configuration
+    - `variables.tf` - this file will contain the variable definitions making your terraform setup more flexible
+    - `outputs.tf` - this file will contain the output definitions, so that you get the information you need after the terraform setup is done
+    - `terraform.tfvars` - this file will contain the actual values for the variables defined in `variables.tf` as key-value pairs
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello World! | ). 
-```
+## Exercise 1.2 - Create the provider configuration
 
+After completing these steps you will have created the provider configuration.
 
+The basic configuration of the Terraform provider for SAP BTP is available in the official documentation located in the [Terraform registry](https://registry.terraform.io/providers/SAP/btp/latest/docs). Looking at the documentation we see that we need to tell Terraform which provider to use and how to authenticate against the SAP BTP. Let's do that
 
-## Exercise 1.2 Sub Exercise 2 Description
+1.	Open the file `provider.tf`.
+1.	Add the following code to the file and save the changes:
 
-After completing these steps you will have...
+      ```terraform
+      terraform {
+        required_providers {
+          btp = {
+            source  = "SAP/btp"
+            version = "~> 1.5.0"
+          }
+        }
+      }
+      
+      # Please checkout documentation on how best to authenticate against SAP BTP
+      # via the Terraform provider for SAP BTP
+      provider "btp" {
+        globalaccount  = var.globalaccount
+      }
+      ```
 
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
+      In accordance to the documentation we instruct Terraform to use the provider in version 1.5.0 . We also added the authentication information as a [variable](https://developer.hashicorp.com/terraform/language/values/variables) to increase flexibility. To make the story complete we need to define the variable nect. 
 
-```
+1. Open the file `variables.tf`.
+1. Add the following code to the file and save the changes:
 
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
+    ```terraform
+    variable "globalaccount" {
+      type    = string
+      default = "SUBDOMAIN OF YOU GLOBAL ACCOUNT"
+    }
+    ```
 
+    As default value enter the subdomain value of *your* global account which has the format `xxxxxxxxtrial-ga`.
 
 ## Summary
 
-You've now ...
+You've now finished the basic setup namely the provider configuration to start with the Terraform configuration for our desired setup.
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+Continue to - [Exercise 2 - Create a subaccount](../ex2/README.md)
 

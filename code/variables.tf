@@ -4,12 +4,6 @@ variable "globalaccount" {
   default = "xxxxxxxxtrial-ga"
 }
 
-variable "cli_server_url" {
-  type        = string
-  description = "Defines the CLI server URL"
-  default     = "https://cli.btp.cloud.sap"
-}
-
 variable "subaccount_domain_prefix" {
   type        = string
   description = "The prefix used for the subaccount domain"

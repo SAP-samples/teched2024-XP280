@@ -13,7 +13,7 @@ In general you must clone this GitHub repository. You must have the Git client i
 You can then clone the repository via the following command:
 
 ```bash
-git clone https://github.com/SAP-samples/TOBEDEFINED.git
+git clone https://github.com/SAP-samples/teched2024-XP280.git
 ```
 
 you find the exercises in the folder `exercises`.
@@ -42,11 +42,11 @@ If this is not the case execute the following steps:
 
 2. Enter `Dev Containers: Reopen in Container` and confirm with `Enter`.
 
-3. You will then be asked to select a dev container. Select the `Terraform provider for SAP BTP - Default` container:
+3. You will then be asked to select a dev container. Select the `TechEd 2024 XP280` container:
 
-    ![Select dev container](assets/devcontainer-selection.png)
+    ![Select dev container](images/devcontainer-selection.png)
 
-The dev container will automatically start and you are ready to go
+The dev container will automatically start and you are ready to go.
 
 ## GitHub Codespaces
 
@@ -54,9 +54,9 @@ To use [Codespaces](https://docs.github.com/codespaces/overview) you must have a
 
 You can then access the Codespace following these steps:
 
-1. Open the [GitHub repository of the Terraform samples](https://github.com/SAP-samples/btp-terraform-samples).
+1. Open the [GitHub repository of the Terraform samples](https://github.com/SAP-samples/teched2024-XP280).
 
-    ![Screenshot of GitHub repository Terraform samples](assets/repo-terraform-samples.png)
+    ![Screenshot of GitHub repository Terraform samples](images/repo-terraform-samples.png)
 
 2. Click on this button and create the code space:
 
@@ -64,15 +64,15 @@ You can then access the Codespace following these steps:
 
     This will take a few minutes. Be patient 🙂
 
-    ![Screenshot of navigation to Codespace creation in the repository Terraform samples](assets/codespace-creation.png)
+    ![Screenshot of navigation to Codespace creation in the repository Terraform samples](images/codespace-creation.png)
 
 3. While the Codespace is created for you, you will see this screen
 
-    ![Screenshot of setup screen for Codespace](assets/codespace-setup-process.png)
+    ![Screenshot of setup screen for Codespace](images/codespace-setup-process.png)
 
 4. Once all is done, you are in your Codespace.
 
-    ![Screenshot of GitHub Codespace view on the repository Terraform samples](assets/codespace-screen.png)
+    ![Screenshot of GitHub Codespace view on the repository Terraform samples](images/codespace-screen.png)
 
 > [!IMPORTANT]
 > GitHub codespaces are free for a certain amount of time per month. For the hands-on session the free time is more than enough. **Don't forget to delete your codespace again after the hands-on session!**
