@@ -12,5 +12,4 @@ terraform {
 # via the Terraform provider for SAP BTP
 provider "btp" {
   globalaccount  = var.globalaccount
-  cli_server_url = var.cli_server_url
 }
