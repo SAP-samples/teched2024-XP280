@@ -160,15 +160,15 @@ After completing these steps you will have executed the Terraform configuration 
     terraform plan -out=tfplan
     ```
 
-    This will show you what Terraform will do if we would apply the configuration. This step is important to validate if the configuration is acting as expected. We will also save the plan to a file for using it later. Execute the following command:
+    This will show you what Terraform will do if we would apply the configuration. This step is important to validate if the configuration is acting as expected. We also saved the plan to a file for using it later.
 
-    You should see that Terraform would create a subaccount with the parameters you provided. This looks good, so let us apply the plan via:
+    You should see that Terraform would create the SAP Build Code setup. This looks good, so let us apply the plan via:
 
     ```bash
     terraform apply tfplan
     ```
 
-    As a result you see in the output that Terraform is creating the subaccount. You can also check the SAP BTP cockpit to see the subaccount being created.
+    As a result you see in the output that Terraform is creating the subaccount. You can also check the SAP BTP cockpit to see the resources being created.
 
 ## Summary
 
