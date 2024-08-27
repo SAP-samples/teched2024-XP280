@@ -6,8 +6,8 @@ updates:
       interval: "weekly"
   - package-ecosystem: "terraform"
     directories: 
-      - "/exercises/*"
       - "/solutions/*"
+      - "/modules/*"
     schedule:
       interval: "weekly"
   - package-ecosystem: "devcontainers"
