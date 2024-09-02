@@ -187,7 +187,7 @@ After completing these steps you will have executed the Terraform configuration 
 
     As we already have a resource created on SAP BTP this step is important to validate if the configuration is acting as expected. We also saved the plan to a file for using it later.
 
-    Looking at the output, this looks like what we expected. Some resources will be addedd, but no chnages to existing ones and no deletions:
+    Looking at the output, this looks like what we expected. Some resources will be addedd, but no changes to existing ones and no deletions:
 
     ![Output of terrraform plan](./images/output-terraform-plan.png)
 

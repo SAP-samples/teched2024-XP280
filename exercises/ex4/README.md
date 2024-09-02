@@ -22,7 +22,7 @@ Once finished let us start to integrate the module into our main configuration.
 
 After completing these steps you will have enhanced the configuration to setup SAP Build Process Automation.
 
-1. As the new modules comes with a few new variables we must add those to our configuration. Open the `variables.tf` file, add the following code and safe your changes:
+1. As the new module comes with a new variables we must add them to our configuration. Open the `variables.tf` file, add the following code and safe your changes:
 
    ``` terraform
    variable "process_automation_admins" {
@@ -41,9 +41,9 @@ After completing these steps you will have enhanced the configuration to setup S
    }
    ```
 
-   This input will be used for the corresponding role collection assignment inside of the module.
+   This input will be used for the role collection assignments in the module.
 
-1. We of course also need to provide the values for these variables. Open the `terraform.tfvars` file and add the following code:
+1. We also need to provide the values for these variables to assign ourself to the role collections to have access to SAP Build Process Automation. You already know the game. Open the `terraform.tfvars` file and add the following code:
 
    ``` terraform
    # users for SAP Build Process Automation
@@ -52,7 +52,7 @@ After completing these steps you will have enhanced the configuration to setup S
    process_automation_participants = ["your.email@foo.xyz"]
    ```
 
-   Replace all appearances of `your.email@foo.xyz` with the email addresses of your SAP BTP user, so that you get the role collections assigned. Safe the changes.
+   Replace all appearances of `your.email@foo.xyz` with the email address of your SAP BTP user and safe the changes.
 
 1. Next we need to add the module to our configuration. Open the `main.tf` file and add the following code:
 
@@ -69,9 +69,9 @@ After completing these steps you will have enhanced the configuration to setup S
    }
    ```
 
-   We provided the parameters based on our variables as well as with ID of the subaccount `btp_subaccount.sa_build.id` which we get returned from the corresponding resource. Safe your changes.
+   As in the previous exercise We provided the parameters based on our variables and the ID of the subaccount `btp_subaccount.sa_build.id`. Safe your changes.
 
-1. As a final step we propagate the output of the module via the outputs of our configuration. Open the `outputs.tf` file and add the following code:
+1. As final step we propagate the output of the module via the outputs of our configuration. Open the `outputs.tf` file and add the following code:
 
    ```terraform
    output "url_sap_build_process_automation" {
@@ -79,11 +79,15 @@ After completing these steps you will have enhanced the configuration to setup S
    }
    ```
 
-    Safe your changes and let's give the enhanced configuration a try.
+    Safe your changes and do ... yes the formatting exercise via:
+
+    ```bash
+    terraform fmt
+    ```
 
 ## Exercise 4.3 - Execute Terraform
 
-After completing these steps you will have executed the Terraform configuration and successfully created a the SAP Build Process Automation resources in your subaccount.
+After completing these steps you will have executed the Terraform configuration and successfully created the SAP Build Process Automation resources in your subaccount.
 
 1. As we added another module to our setup we must reinitialize the configuration to make Terraform aware of this. To achieve this execute the following command:
 
@@ -91,23 +95,45 @@ After completing these steps you will have executed the Terraform configuration 
     terraform init -upgrade
     ```
 
-    This will initialize the setup and download the required provider. You can also check your file system to see that a `.terraform` directory has been created.
+    which results in the following output:
 
-1. Next we want to check what Terraform will do when we apply the configuration. We do so via the command
+    ![Output of Terraform init -upgrade](./images/output-terraform%20init-upgrade.png)
+
+    As in the previous step, this adds the newly added module to the setup needed by Terraform.
+
+1. As in the previous exercises, let us validate the new configuration
+
+    ```bash
+    terraform validate
+    ```
+    This should show no errors. We can continue with the Terraform flow.
+
+1. We want to check what Terraform will do when we apply the new configuration via:
 
     ```bash
     terraform plan -out=tfplan
     ```
 
-    This will show you what Terraform will do if we would apply the configuration. This step is important to validate if the configuration is acting as expected. We also saved the plan to a file for using it later.
+    As we already have a resource created on SAP BTP this step is important to validate if the configuration is acting as expected. We also saved the plan to a file for using it later.
 
-    You should see that Terraform would create the SAP Build Process Automation setup. This looks good, so let us apply the plan via:
+    Looking at the output, this looks like what we expected. Some resources will be addedd, but no changes to existing ones and no deletions:
+
+    ![Output of terrraform plan](./images/output-terraform-plan.png)
+
+
+ 1. As the plannning looked good, let's apply the plan via (this might take a bit):
 
     ```bash
     terraform apply tfplan
     ```
 
-    As a result you see that Terraform created the resources. As we specified dedicated output variables we also see them as separate section at the end of the output from the Terraform CLI.
+    As a result we see that Terraform created the resources for SAP Build Process automation. The new output variable also shows up in the `Outputs` section at the end of the log from the Terraform CLI:
+
+       ![Output of terrraform apply](./images/output-terraform-apply.png)
+
+    A quick cross-check in the SAP BTP cockpit shows us the new resources as part of our subaccount:
+
+
 
 ## Summary
 
@@ -120,3 +146,13 @@ That's it folks! You've now completed the setup of an environment on SAP BTP com
 We hope you enjoyed the ride and learned something new along the way. If you have any questions or feedback, please don't hesitate to reach out to us.
 
 With that ... happy Terraforming! 🚀
+
+## Cleanup
+
+Terraform also makes it easy for you to clean up the setup. If you want to remove this setup from your trial execute the following command:
+
+```bash
+terraform destroy
+```
+
+
