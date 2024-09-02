@@ -56,9 +56,9 @@ To use [Codespaces](https://docs.github.com/codespaces/overview) you must have a
 
 You can then access the Codespace following these steps:
 
-1. Open the [GitHub repository of the Terraform samples](https://github.com/SAP-samples/teched2024-XP280).
+1. Open the [GitHub repository of the TechEd 2024 session 280](https://github.com/SAP-samples/teched2024-XP280).
 
-    ![Screenshot of GitHub repository Terraform samples](images/repo-teched2024%20xp280.png)
+    ![Screenshot of GitHub repository for TecheEd 2024 XP 280](images/repo-teched2024%20xp280.png)
 
 2. Click on this button and create the code space:
 
