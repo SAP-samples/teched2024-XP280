@@ -7,7 +7,7 @@
 secret.auto.tfvars
 terraform.tfvars
 tfplan
-
+terraform_build
 
 # Any kind of invironment variables
 *.env
