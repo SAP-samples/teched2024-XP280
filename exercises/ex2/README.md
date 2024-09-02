@@ -84,13 +84,20 @@ Let's do that.
 
 After completing these steps you will have executed the Terraform configuration and successfully created a subaccount in your global account. To execute Terraform open a new Terminal window to enter the Terraform commands:
 
+1. In the terminal change to the `terraform_build` directory that you already created.
+
+    ```bash
+    cd terraform_build
+    ```
+
+
 1. First we want to make sure that everything is properly formated. The Terraform CLI supports us with this.
 
     ```bash
     terraform fmt
     ```
 
-   This cmmand executes the formating of your configuration so that it is complaint with the Terraform best practices.
+   This command executes the formating of your configuration so that it is complaint with the Terraform best practices.
 
 1. As we are using Terraform for the first time we must initialize the setup. We do so via the command:
 
@@ -103,7 +110,9 @@ After completing these steps you will have executed the Terraform configuration 
 
     This will initialize the setup and download the required provider. You can also check your file system to see that a `.terraform` directory and a file called `.terraform.lock.hcl` have been created.
 
-    ![Terraform init file changes](./images/terraform%20init%20-%20file%20changes.png)
+3. Next we execute another planning:
+
+  ![Terraform init file changes](./images/terraform%20init%20-%20file%20changes.png)
 
 1. Now we wnt to make a static check of out configuration to make sure that the configuration at design time is syntactically correct. We do so via the the following command:
 
