@@ -1,4 +1,7 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2024-XP280)](https://api.reuse.software/info/github.com/SAP-samples/teched2024)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=841902616&skip_quickstart=true&machine=basicLinux32gb&geo=EuropeWest&devcontainer_path=.devcontainer%2Fdevcontainer.json)
+
+
 
 # XP280 - From clicks to code: Managing your SAP BTP infrastructure with Terraform
 

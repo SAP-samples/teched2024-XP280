@@ -42,6 +42,8 @@ If this is not the case execute the following steps:
 
 2. Enter `Dev Containers: Reopen in Container` and confirm with `Enter`.
 
+    ![Search for open in dev container](images/devcontainer-search.png)
+
 3. You will then be asked to select a dev container. Select the `TechEd 2024 XP280` container:
 
     ![Select dev container](images/devcontainer-selection.png)
@@ -60,11 +62,11 @@ You can then access the Codespace following these steps:
 
 2. Click on this button and create the code space:
 
-   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=656281656&skip_quickstart=true&machine=basicLinux32gb&geo=EuropeWest&devcontainer_path=.devcontainer%2Fdevcontainer.json)
+   [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=841902616&skip_quickstart=true&machine=basicLinux32gb&geo=EuropeWest&devcontainer_path=.devcontainer%2Fdevcontainer.json)
 
     This will take a few minutes. Be patient 🙂
 
-    ![Screenshot of navigation to Codespace creation in the repository Terraform samples](images/codespace-creation.png)
+    ![Screenshot of navigation to Codespace creation in the repository TechEd 2024 ](images/codespace-creation.png)
 
 3. While the Codespace is created for you, you will see this screen
 
@@ -102,6 +104,6 @@ Validate that the values are set via:
 
 ## Summary
 
-You've now prepared your development environment and have all information to finally start using Terraform provider for SAP BTP.  
+You've now prepared your development environment and have all information to finally start using Terraform provider for SAP BTP.
 
 Continue to - [Exercise 1 - Setup Basics of Terraform Configuration](../ex1/README.md).
