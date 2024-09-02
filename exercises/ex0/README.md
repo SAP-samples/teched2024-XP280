@@ -58,7 +58,7 @@ You can then access the Codespace following these steps:
 
 1. Open the [GitHub repository of the Terraform samples](https://github.com/SAP-samples/teched2024-XP280).
 
-    ![Screenshot of GitHub repository Terraform samples](images/repo-terraform-samples.png)
+    ![Screenshot of GitHub repository Terraform samples](images/repo-teched2024%20xp280.png)
 
 2. Click on this button and create the code space:
 
