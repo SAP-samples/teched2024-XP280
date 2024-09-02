@@ -10,6 +10,7 @@ After completing these steps you will have created the file layout needed for th
 
 1. Go to the root directory of this project and create a new directory called `terraform-build`
 1. Switch into the newly created directory `terraform-build`.
+1. Navigate into the directory `terraform-build`.
 1. Create the following files inside of the directory:
     - `main.tf` - this file will contain the main Terraform configuration
     - `provider.tf` - this file will contain the provider configuration
@@ -31,11 +32,11 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
         required_providers {
           btp = {
             source  = "SAP/btp"
-            version = "~> 1.5.0"
+            version = "~> 1.6.0"
           }
         }
       }
-      
+
       # Please checkout documentation on how best to authenticate against SAP BTP
       # via the Terraform provider for SAP BTP
       provider "btp" {
@@ -43,7 +44,7 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
       }
       ```
 
-      In accordance to the documentation we instruct Terraform to use the provider in version 1.5.0 . We also added the authentication information as a [variable](https://developer.hashicorp.com/terraform/language/values/variables) to increase flexibility. To make the story complete we need to define the variable nect. 
+      In accordance to the documentation we instruct Terraform to use the provider in version 1.6.0 . We also added the authentication information as a [variable](https://developer.hashicorp.com/terraform/language/values/variables) to increase flexibility. To make the story complete we need to define the variable.
 
 1. Open the file `variables.tf`.
 1. Add the following code to the file and save the changes:
@@ -60,7 +61,11 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
     globalaccount = "<your-global-account-subdomain>"
     ```
 
-    Enter the subdomain value of *your* global account which has the format `xxxxxxxxtrial-ga` and safe your changes
+    Enter the subdomain value of *your* global account which has the format `xxxxxxxxtrial-ga` and safe your changes.
+
+    You find the value in the SAP BTP Cockpit in the account explorer:
+
+     ![SAP BTP Account explorer - subdomain](images/globalaccount-subdomain.png)
 
 ## Summary
 
