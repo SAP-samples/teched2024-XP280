@@ -2,7 +2,7 @@
 
 In this exercise, we will we will enhance the existing configuration to setup SAP Build Process Automation leveraging a Terraform module.
 
-> **Note** - You can find the solution for this exercise in the [solutions/ex4](../../solutions/ex4/) folder.
+> **Note** - You find the solution for this exercise in the [solutions/ex4](../../solutions/ex4/) folder.
 
 ## Exercise 4.1 - Become familiar with the SAP Build Process Automation module
 
@@ -29,12 +29,12 @@ After completing these steps you will have enhanced the configuration to setup S
      type        = list(string)
      description = "Defines the users who have the role of ProcessAutomationAdmin in SAP Build Process Automation"
    }
-   
+
    variable "process_automation_developers" {
      type        = list(string)
      description = "Defines the users who have the role of ProcessAutomationDeveloper in SAP Build Process Automation"
    }
-   
+
    variable "process_automation_participants" {
      type        = list(string)
      description = "Defines the users who have the role of ProcessAutomationParticipant in SAP Build Process Automation"
@@ -60,9 +60,9 @@ After completing these steps you will have enhanced the configuration to setup S
    ```terraform
    module "build_process_automation" {
      source = "../modules/build_process_automation"
-   
+
      subaccount_id  = btp_subaccount.sa_build.id
-   
+
      process_automation_admins       = var.process_automation_admins
      process_automation_developers   = var.process_automation_developers
      process_automation_participants = var.process_automation_participants
