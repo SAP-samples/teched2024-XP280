@@ -17,7 +17,6 @@ This session introduces attendees to Terraform as the de-facto standard for infr
 
 In this session we will walk you through the setup process of the SAP Build portfolio via the Terraform Provider for SAP BTP. At the end of the session you will have the following assets in your SAP BTP trial account ready to use:
 
-- SAP Build Apps
 - SAP Build Code
 - SAP Build Process Automation
 

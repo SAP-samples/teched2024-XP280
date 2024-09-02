@@ -14,7 +14,7 @@ The setup of SAP Build Code consists of several components:
 - Subscription to the SAP Build Code as well as to the BAS application.
 - Assignment of the role collections to the users to access the applications.
 
-That is quite a lot of stuff to do. In addition, these bits and pieces will always be the same when you want to setup Build Code in a new subaccount. We certainly do not want to copy&paste these steps in our configurations, so is there another way to do this?
+That is quite a lot of stuff to do. In addition, these bits and pieces will always be the same when you want to setup SAP Build Code in a new subaccount. We certainly do not want to copy&paste these steps in our configurations, so is there another way to do this?
 
 Yes there is: Terraform provides a feature that allows you to define reusable blocks of configuration that can be called from multiple places. These reusable blocks are called [modules](https://developer.hashicorp.com/terraform/language/modules).
 
