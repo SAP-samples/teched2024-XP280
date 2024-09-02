@@ -82,7 +82,14 @@ So let's do that.
 
 After completing these steps you will have executed the Terraform configuration and successfully created a subaccount in your global account.
 
-1. As we are using Terraform for the first time we must initialize the setup. We do so via the command
+1. In the terminal change to the `terraform_build` directory that you already created.
+
+    ```bash
+    cd terraform_build
+    ```
+
+
+2. As we are using Terraform for the first time we must initialize the setup. We do so via the command
 
     ```bash
     terraform init
@@ -90,7 +97,7 @@ After completing these steps you will have executed the Terraform configuration 
 
     This will initialize the setup and download the required provider. You can also check your file system to see that a `.terraform` directory has been created.
 
-1. Next we execute another planning:
+3. Next we execute another planning:
 
     ```bash
     terraform plan -out=tfplan
