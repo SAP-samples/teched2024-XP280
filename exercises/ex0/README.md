@@ -56,23 +56,26 @@ To use [Codespaces](https://docs.github.com/codespaces/overview) you must have a
 
 You can then access the Codespace following these steps:
 
-1. Open the [GitHub repository of the Terraform samples](https://github.com/SAP-samples/teched2024-XP280).
+1. Open the [GitHub repository of the TechEd 2024 session 280](https://github.com/SAP-samples/teched2024-XP280).
 
-    ![Screenshot of GitHub repository Terraform samples](images/repo-terraform-samples.png)
+    ![Screenshot of GitHub repository for TecheEd 2024 XP 280](images/repo-teched2024%20xp280.png)
 
-2. Click on this button and create the code space:
+1. Click on this button and create the code space:
 
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=841902616&skip_quickstart=true&machine=basicLinux32gb&geo=EuropeWest&devcontainer_path=.devcontainer%2Fdevcontainer.json)
 
+
+1. A congiguration overview will be opened in the browser. You can adjust the region to a location near you (1) and confirm the creation of the Codespace (2):
+
+    ![Screenshot of Codespace configuration](images/codespace-config.png)
+
     This will take a few minutes. Be patient 🙂
 
-    ![Screenshot of navigation to Codespace creation in the repository TechEd 2024 ](images/codespace-creation.png)
+1. While the Codespace is created for you, you will see this screen
 
-3. While the Codespace is created for you, you will see this screen
+    ![Screenshot of navigation to Codespace creation in the repository TechEd 2024](images/codespace-creation.png)
 
-    ![Screenshot of setup screen for Codespace](images/codespace-setup-process.png)
-
-4. Once all is done, you are in your Codespace.
+1. Once all is done, you are in your Codespace.
 
     ![Screenshot of GitHub Codespace view on the repository Terraform samples](images/codespace-screen.png)
 
