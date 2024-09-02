@@ -133,7 +133,9 @@ After completing these steps you will have executed the Terraform configuration 
 
     A quick cross-check in the SAP BTP cockpit shows us the new resources as part of our subaccount:
 
+    ![SAP BTP Cockpit - App for SAP Build Process Automation](./images/BTP-cockpit-bpa-apps.png)
 
+    ![SAP BTP Cockpit - Role Coellction assignment for SAP Build Process Automation](./images/BTP-cockpit-bpa-role-collections.png)
 
 ## Summary
 
@@ -154,5 +156,12 @@ Terraform also makes it easy for you to clean up the setup. If you want to remov
 ```bash
 terraform destroy
 ```
+This will trigger another round of planning. Check the result if the resources that are planned for destroy match you expectations:
 
+![Output of Terraform destroy planning](./images/output-terraform-destroy-planning.png)
 
+If they do confirm the destroy operation and enjoy the show. At the output shows that all resources have been destroyed:
+
+![Output of Terraform destroy execution](./images/output-terraform-destroy.png)
+
+After the command has successfully finished, all resources you created via Terraform are deleted from your trial account on SAP BTP.
