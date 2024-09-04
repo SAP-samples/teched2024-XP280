@@ -8,12 +8,6 @@ variable "subaccount_domain_prefix" {
   default     = "TechEd2024-TF"
 }
 
-variable "subaccount_id" {
-  type        = string
-  description = "The subaccount ID."
-  default     = ""
-}
-
 variable "subaccount_name" {
   type        = string
   description = "The subaccount name."
