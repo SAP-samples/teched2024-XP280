@@ -28,7 +28,7 @@ module "build_code" {
   application_studio_developers         = var.application_studio_developers
   application_studio_extension_deployer = var.application_studio_extension_deployer
 
-  build_code_admins     = var.application_studio_admins
+  build_code_admins     = var.build_code_admins
   build_code_developers = var.build_code_developers
 }
 

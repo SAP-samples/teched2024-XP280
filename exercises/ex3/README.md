@@ -96,6 +96,7 @@ Besides that we need to add the new variables for the user that should get the a
      type        = list(string)
      description = "Defines the colleagues who are developers for SAP Business Application Studio"
    }
+   
    variable "application_studio_extension_deployer" {
      type        = list(string)
      description = "Defines the colleagues who are extension deployers for SAP Business Application Studio"
@@ -129,7 +130,7 @@ Besides that we need to add the new variables for the user that should get the a
      application_studio_developers         = var.application_studio_developers
      application_studio_extension_deployer = var.application_studio_extension_deployer
 
-     build_code_admins     = var.application_studio_admins
+     build_code_admins     = var.build_code_admins
      build_code_developers = var.build_code_developers
    }
    ```
