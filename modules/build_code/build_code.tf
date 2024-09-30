@@ -5,7 +5,7 @@ terraform {
   required_providers {
     btp = {
       source  = "SAP/btp"
-      version = "~> 1.6.0"
+      version = "~> 1.7.0"
     }
   }
 }
@@ -59,7 +59,7 @@ resource "btp_subaccount_role_collection_assignment" "build_code_administrator" 
   user_name            = each.value
   depends_on           = [btp_subaccount_role_collection.build_code_administrator]
 }
-# Create role collection "Build Code Developer"  
+# Create role collection "Build Code Developer"
 resource "btp_subaccount_role_collection" "build_code_developer" {
   subaccount_id = var.subaccount_id
   name          = "Build Code Developer"
