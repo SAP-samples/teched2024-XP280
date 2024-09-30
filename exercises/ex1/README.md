@@ -7,7 +7,7 @@ In this exercise, we will implement the basic Terraform configuration.
 
 ## Exercise 1.1 - Create the necessary files
 
-After completing these steps you will have created the file layout needed for the Terraform configuration.
+After completing these steps, you will have created the file layout needed for the Terraform configuration.
 
 1. Go to the root directory of this project and create a new directory called `terraform-build`
 1. Switch into the newly created directory `terraform-build`.
@@ -21,7 +21,7 @@ After completing these steps you will have created the file layout needed for th
 
 ## Exercise 1.2 - Create the provider configuration
 
-After completing these steps you will have created the provider configuration.
+After completing these steps, you will have created the provider configuration.
 
 The basic configuration of the Terraform provider for SAP BTP is available in the official documentation located in the [Terraform registry](https://registry.terraform.io/providers/SAP/btp/latest/docs). Looking at the documentation we see that we need to tell Terraform which provider to use and how to authenticate against the SAP BTP. Let's do that
 

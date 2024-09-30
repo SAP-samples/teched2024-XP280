@@ -7,7 +7,7 @@ In this exercise, we will enhance the existing configuration to setup SAP Build 
 
 ## Exercise 3.1 - Become familiar with the SAP Build Code module
 
-After completing these steps you will know how the module for SAP Build Code is structured.
+After completing these steps, you will know how the module for SAP Build Code is structured.
 
 The setup of SAP Build Code consists of several components:
 
@@ -17,31 +17,31 @@ The setup of SAP Build Code consists of several components:
 
 That is quite a lot of stuff to do. In addition, these bits and pieces will always be the same when you want to setup SAP Build Code in a new subaccount. We certainly do not want to copy&paste these steps in our configurations, so is there another way to do this?
 
-Yes there is: Terraform provides a feature that allows you to define reusable blocks of configuration that can be called from multiple places. These reusable blocks are called [modules](https://developer.hashicorp.com/terraform/language/modules).
+Yes, there is: Terraform provides a feature that allows you to define reusable blocks of configuration that can be called from multiple places. These reusable blocks are called [modules](https://developer.hashicorp.com/terraform/language/modules).
 
 To make your life easier we already created a module for the setup of SAP Build Code comprising the components mentioned above. You find the module in the folder `modules/build_code`.
 
 ![Overview of modules in repository](./images/modules.png)
 
-Let us take a look at the structure of this module. The layout in the file system is as follows:
+Let us look at the structure of this module. The layout in the file system is as follows:
 
 - `build_code_variables.tf`
 - `build_code.tf`
 - `build_code_outputs.tf`
 
-Looks somewhat similar to our main configuration, right? So let us take a closer look at the content of these files.
+Looks somewhat like our main configuration, right? So let us take a closer look at the content of these files.
 
 ### `build_code_variables.tf`
 
-This file comprises the variables this module expects in order to work. This could be sign as the interface of the module.
+This file comprises the variables this module expects to work. This could be sign as the interface of the module.
 
 We need to provide the following information:
 
 - `subaccount_id` - The subaccount ID where the SAP Build Code should be setup.
 - `build_code_admins` - The colleagues who are admins for SAP Build Code. This is a list of email addresses.
-- `build_code_developers` -  The colleagues who are developers for SAP Build Code. This is a list of email addresses.
+- `build_code_developers` - The colleagues who are developers for SAP Build Code. This is a list of email addresses.
 - `application_studio_admins` - The colleagues who are admins for SAP Business Application Studio. This is a list of email addresses
-- `application_studio_developers` - The colleagues who are developers for SAP Business Application Studio. This is a list of email addresses.{
+- `application_studio_developers` - The colleagues who are developers for SAP Business Application Studio. This is a list of email addresses.
 - `application_studio_extension_deployer` - The colleagues who are extension deployers for SAP Business Application Studio. This is a list of email addresses.
 
 Makes sense. Let's look at the other files.
@@ -50,30 +50,30 @@ Makes sense. Let's look at the other files.
 
 This file corresponds to the main configuration file of the module. It contains all the heavy lifting of the setup of SAP Build Code. The parameters from above are used to create the resources in the right subaccount and assign the role collections to the right user groups.
 
-In addition we see at the very beginning of the file the expected provider and the version this module is compatible with. It does not contain any information for the setup of the provider, as this is inherited from the main configuration.
+In addition, we see at the very beginning of the file the expected provider and the version this module is compatible with. It does not contain any information for the setup of the provider, as this is inherited from the main configuration.
 
-When taking a closer look we see several further constructs that Terraform offers like:
+When taking a closer look, we see several further constructs that Terraform offers like:
 
 - `Data sources` to fetch information from the SAP BTP during execution time.
 - The [`depends_on` meta argument](https://developer.hashicorp.com/terraform/language/meta-arguments/depends_on) to model dependencies between resources that Terraform cannot infer automatically.
 - The [`for_each` meta argument](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each) to iterate over a list of elements and create a resource for each element.
 - The [`for` expression](https://developer.hashicorp.com/terraform/language/expressions/for) to create an complex type by transforming another complex type.
 
-Quite some stuff to digest, but for now enough to know that the modules does exactly what we are looking for.
+Quite some stuff to digest, but for now enough to know that the module does exactly what we are looking for.
 
 ### `build_code_outputs.tf`
 
-Additionally the module defines some curated outputs that can be used in the main configuration. In this case it comprises the useful information about the URLs for Build Code and BAS.
+Additionally, the module defines some curated outputs that can be used in the main configuration. In this case it comprises the useful information about the URLs for Build Code and BAS.
 
 As we have a good impression on what the module does, let us integrate it into our main configuration.
 
 ## Exercise 3.2 - Configure the SAP Build Code module
 
-After completing these steps you will have enhanced the configuration to create SAP Build code in your subaccount.
+After completing these steps, you will have enhanced the configuration to create SAP Build code in your subaccount.
 
 To do so Terraform provides the [module block](https://developer.hashicorp.com/terraform/language/modules/syntax) that allows us to specify a module including its location and the parameters it expects. In our case the module is local so provide the path to the module folder.
 
-Besides that we need to add the new variables for the user that should get the assignment of the role collections. Let's do this.
+Besides that, we need to add the new variables for the user that should get the assignment of the role collections. Let's do this.
 
 1. Open the `variables.tf` file, add the following code and safe your changes:
 
@@ -104,7 +104,7 @@ Besides that we need to add the new variables for the user that should get the a
    }
    ```
 
-1. We also need to provide the values for these variables so that you have access to SAP Build Code after thecreation. For that open the `terraform.tfvars` file and add the following code:
+1. We also need to provide the values for these variables so that you have access to SAP Build Code after the creation. For that open the `terraform.tfvars` file and add the following code:
 
    ``` terraform
    # users for SAP Build Code
@@ -154,15 +154,15 @@ Besides that we need to add the new variables for the user that should get the a
 
 ## Exercise 3.3 - Execute Terraform
 
-After completing these steps you will have executed the Terraform configuration and successfully created a the SAP Build Code resources in your subaccount.
+After completing these steps, you will have executed the Terraform configuration and successfully created a the SAP Build Code resources in your subaccount.
 
-1. As in the previous exercise we want to do some basic quality measures before execution namely formating. Open a terminal and execute the following command:
+1. As in the previous exercise we want to do some basic quality measures before execution namely formatting. Open a terminal and execute the following command:
 
    ```bash
    terraform fmt
    ```
 
-1. As we added a module to our setup we must Terraform aware of this. To achieve this execute the following command:
+2. As we added a module to our setup, we must make Terraform aware of this. To achieve this execute the following command:
 
     ```bash
     terraform get
@@ -175,16 +175,16 @@ After completing these steps you will have executed the Terraform configuration 
     ![Module in .terraform folder](./images/modules-filesystem.png)
 
 > [!NOTE]
-> In contrast to the inital setup via `terraform init` we want to restrict the re-initialization to the newly added modules. We acheve this by using [`terraform get`](https://developer.hashicorp.com/terraform/cli/commands/get). If you want to to re-initalize the setup including provider versions you should execute [`terraform init  -upgrade`](https://developer.hashicorp.com/terraform/cli/commands/init#upgrade). Be aware that this could result in newer provider versions depending on the version constraints of your provider configuration. 
+> In contrast to the initial setup via `terraform init` we want to restrict the re-initialization to the newly added modules. We achieve this by using [`terraform get`](https://developer.hashicorp.com/terraform/cli/commands/get). If you want to re-initialize the setup including provider versions you should execute [`terraform init -upgrade`](https://developer.hashicorp.com/terraform/cli/commands/init#upgrade). Be aware that this could result in newer provider versions depending on the version constraints of your provider configuration.
 
-1. Next we do another round of validation of our configuration:
+3. Next we do another round of validation of our configuration:
 
    ```bash
    terraform validate
    ```
-   As expected - no error, so let's do the planning.
+   No error, so let's do the planning.
 
-1. Next we want to check what Terraform will do when we apply the configuration. We do so via the command:
+4. Next we want to check what Terraform will do when we apply the configuration. We do so via the command:
 
     ```bash
     terraform plan -out=tfplan
@@ -192,17 +192,17 @@ After completing these steps you will have executed the Terraform configuration 
 
     As we already have a resource created on SAP BTP this step is important to validate if the configuration is acting as expected. We also saved the plan to a file for using it later.
 
-    Looking at the output, this looks like what we expected. Some resources will be addedd, but no changes to existing ones and no deletions:
+    Looking at the output, this looks like what we expected. Some resources will be added, but no changes to existing ones and no deletions:
 
     ![Output of terrraform plan](./images/output-terraform-plan.png)
 
-1. As the panning looks good, let' u's apply the plan via:
+5. As the planning looks good, let us apply the plan via:
 
     ```bash
     terraform apply tfplan
     ```
 
-    As a result we see that Terraform created the resources for SAP Build Code. As we specified dedicated output variables we also see them as separate `Outputs` section at the end of the log from the Terraform CLI:
+    As a result, we see that Terraform created the resources for SAP Build Code. As we specified dedicated output variables, we also see them as separate `Outputs` section at the end of the log from the Terraform CLI:
 
    ![Output of terrraform apply](./images/output-terraform-apply.png)
 
@@ -214,6 +214,6 @@ After completing these steps you will have executed the Terraform configuration 
 
 ## Summary
 
-You have enhanced your SAP BTP infrastructure as Code to create a SAP Build Code setup based on a predefined module. Let's finish things by adding the necessary configuration for SAP Build Process Automation!
+You have enhanced your SAP BTP infrastructure as Code to create an SAP Build Code setup based on a predefined module. Let's finish things by adding the necessary configuration for SAP Build Process Automation!
 
 Continue to - [Exercise 4 - Setup of SAP Build Process Automation](../ex4/README.md)

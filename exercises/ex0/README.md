@@ -1,6 +1,6 @@
 # Getting Started
 
-To execute the exercises you have the following options concerning the required tools installed:
+To execute the exercises, you have the following options concerning the required tools installed:
 
 - Local installation
 - Usage of the provided dev container
@@ -8,7 +8,7 @@ To execute the exercises you have the following options concerning the required 
 
 You find details about the installation of the tools in the following sections
 
-In general you must clone this GitHub repository. You must have the Git client installed on your machine. You can find the installation instructions [here](https://git-scm.com/downloads).
+In general, you must clone this GitHub repository. You must have the Git client installed on your machine. You can find the installation instructions [here](https://git-scm.com/downloads).
 
 You can then clone the repository via the following command:
 
@@ -27,7 +27,7 @@ You can install the required tools locally on your machine. The following tools 
 
 ## Dev Container (recommended)
 
-As an alternative to the local installation you can use the provided dev container that contains all required tools. This requires that you have [Docker](https://www.docker.com/products/docker-desktop) installed on your machine. In addition you need the dev container extension for Visual Studio Code. You can find detailed instructions about the setup [here](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
+As an alternative to the local installation, you can use the provided dev container that contains all required tools. This requires that you have [Docker](https://www.docker.com/products/docker-desktop) installed on your machine. In addition you need the dev container extension for Visual Studio Code. You can find detailed instructions about the setup [here](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
 
 To start a dev container Docker must be running on your machine.
 
