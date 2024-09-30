@@ -99,7 +99,7 @@ After completing these steps you will have executed the Terraform configuration 
     ```bash
     terraform init
     ```
-    Your should see the following putput in the terminal:
+    Your should see the following output in the terminal:
 
     ![Output of the Terraform init command](./images/terraform-init-output.png)
 
@@ -109,7 +109,7 @@ After completing these steps you will have executed the Terraform configuration 
 
   ![Terraform init file changes](./images/terraform%20init%20-%20file%20changes.png)
 
-1. Now we wnt to make a static check of out configuration to make sure that the configuration at design time is syntactically correct. We do so via the the following command:
+1. Now we want to make a static check of out configuration to make sure that the configuration at design time is syntactically correct. We do so via the the following command:
 
     ```bash
     terraform validate

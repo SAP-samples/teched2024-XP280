@@ -162,17 +162,20 @@ After completing these steps you will have executed the Terraform configuration 
    terraform fmt
    ```
 
-1. As we added a module to our setup we must reinitialize the configuration to make Terraform aware of this. To achieve this execute the following command:
+1. As we added a module to our setup we must Terraform aware of this. To achieve this execute the following command:
 
     ```bash
-    terraform init -upgrade
+    terraform get
     ```
 
-    ![Output of Terraform init -upgrade](./images/output-terraform-init-upgrade.png)
+    ![Output of Terraform get](./images/output-terraform-get.png)
 
     This will re-initialize the setup and "download" the newly added module. You can also check your file system to see what changed in the `.terraform` directory.
 
     ![Module in .terraform folder](./images/modules-filesystem.png)
+
+> [!NOTE]
+> In contrast to the inital setup via `terraform init` we want to restrict the re-initialization to the newly added modules. We acheve this by using [`terraform get`](https://developer.hashicorp.com/terraform/cli/commands/get). If you want to to re-initalize the setup including provider versions you should execute [`terraform init  -upgrade`](https://developer.hashicorp.com/terraform/cli/commands/init#upgrade). Be aware that this could result in newer provider versions depending on the version constraints of your provider configuration. 
 
 1. Next we do another round of validation of our configuration:
 
