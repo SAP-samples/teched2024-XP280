@@ -31,11 +31,11 @@ Make sure that the following prerequisites are met:
 
 ## Exercises
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - Setup Basics of Terraform Configuration](exercises/ex1/)
-- [Exercise 2 - Create a Subaccount](exercises/ex2/)
-- [Exercise 3 - Setup of SAP Build Code](exercises/ex3/)
-- [Exercise 4 - Setup of SAP Build Process Automation](exercises/ex4/)
+- [Getting Started](exercises/ex0/README.md)
+- [Exercise 1 - Setup Basics of Terraform Configuration](exercises/ex1/README.md)
+- [Exercise 2 - Create a Subaccount](exercises/ex2/README.md)
+- [Exercise 3 - Setup of SAP Build Code](exercises/ex3/README.md)
+- [Exercise 4 - Setup of SAP Build Process Automation](exercises/ex4/README.md)
 
 ## Contributing
 
