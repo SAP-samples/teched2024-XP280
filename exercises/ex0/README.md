@@ -1,6 +1,6 @@
 # Getting Started
 
-To execute the exercises you have the following options concerning the required tools installed:
+To execute the exercises, you have the following options concerning the required tools installed:
 
 - Local installation
 - Usage of the provided dev container
@@ -8,7 +8,7 @@ To execute the exercises you have the following options concerning the required 
 
 You find details about the installation of the tools in the following sections
 
-In general you must clone this GitHub repository. You must have the Git client installed on your machine. You can find the installation instructions [here](https://git-scm.com/downloads).
+In general, you must clone this GitHub repository. You must have the Git client installed on your machine. You can find the installation instructions [here](https://git-scm.com/downloads).
 
 You can then clone the repository via the following command:
 
@@ -27,7 +27,7 @@ You can install the required tools locally on your machine. The following tools 
 
 ## Dev Container (recommended)
 
-As an alternative to the local installation you can use the provided dev container that contains all required tools. This requires that you have [Docker](https://www.docker.com/products/docker-desktop) installed on your machine. In addition you need the dev container extension for Visual Studio Code. You can find detailed instructions about the setup [here](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
+As an alternative to the local installation, you can use the provided dev container that contains all required tools. This requires that you have [Docker](https://www.docker.com/products/docker-desktop) installed on your machine. In addition you need the dev container extension for Visual Studio Code. You can find detailed instructions about the setup [here](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
 
 To start a dev container Docker must be running on your machine.
 
@@ -104,6 +104,23 @@ Validate that the values are set via:
 
 - Windows: `$env:BTP_USERNAME` and `$env:BTP_PASSWORD`
 - Linux/MacOS/GitHub Codespaces: `echo $BTP_USERNAME` and `echo $BTP_PASSWORD`
+
+## Cleanup SAP BTP Account
+
+We are going to provision several resources like entitlements and subscriptions through the course of this hands-on. As we are working in a trial account there might be limitations e.g., concering the available quotas.
+
+If you created a new trial account, you could delete the existing subaccount from the global account, so that you start from an empty global account
+
+If you have already been working with your SAP BTP trial account, make sure that the enttilements for the following services/application and plan combinations are available:
+
+| Service/Application | Plan |
+|---                  |---
+| build-code          | free
+| sapappstudiotrial   | trial
+| process-automation  | free
+
+> [!WARNING]
+> If you have the plans already in use in a different subaccount the execution of Terraform will fail due to missing available entitlements
 
 ## Summary
 

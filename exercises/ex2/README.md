@@ -2,11 +2,12 @@
 
 In this exercise, we will use Terraform to create a subaccount in your global account.
 
-> **Note** - You find the solution for this exercise in the [solutions/ex2](../../solutions/ex2/) folder.
+> [!NOTE]
+> You find the solution for this exercise in the [solutions/ex2](../../solutions/ex2/) folder.
 
 ## Exercise 2.1 - Create the Terraform configuration
 
-After completing these steps you will have defined the configuration for the subaccount creation using Terraform.
+After completing these steps, you will have defined the configuration for the subaccount creation using Terraform.
 
 To setup a subaccount we must identify the fitting Terraform resource. The official documentation will help us with this.
 
@@ -18,7 +19,7 @@ As we want to create subaccount the resource we are looking for is the resource 
 
 Let's do that.
 
-1. First we define the variables that we later use in the configuration. Open the file `variables.tf` and add the following code to define the three variables for *subaccount name*, *subaccount domain prefix*  and *region*:
+1. First we define the variables that we later use in the configuration. Open the file `variables.tf` and add the following code to define the three variables for *subaccount name*, *subaccount domain prefix* and *region*:
 
       ```terraform
       variable "subaccount_domain_prefix" {
@@ -76,7 +77,7 @@ Let's do that.
 
 ## Exercise 2.2 - Execute Terraform
 
-After completing these steps you will have executed the Terraform configuration and successfully created a subaccount in your global account. To execute Terraform open a new Terminal window to enter the Terraform commands:
+After completing these steps, you will have executed the Terraform configuration and successfully created a subaccount in your global account. To execute Terraform open a new Terminal window to enter the Terraform commands:
 
 1. In the terminal change to the `terraform_build` directory that you already created.
 
@@ -93,22 +94,20 @@ After completing these steps you will have executed the Terraform configuration 
 
    This command executes the formating of your configuration so that it is complaint with the Terraform best practices.
 
-1. As we are using Terraform for the first time we must initialize the setup. We do so via the command:
+1. As we are using Terraform for the first time, we must initialize the setup. We do so via the command:
 
     ```bash
     terraform init
     ```
-    Your should see the following putput in the terminal:
+    Your should see the following output in the terminal:
 
     ![Output of the Terraform init command](./images/terraform-init-output.png)
 
     This will initialize the setup and download the required provider. You can also check your file system to see that a `.terraform` directory and a file called `.terraform.lock.hcl` have been created.
 
-3. Next we execute another planning:
+    ![Terraform init file changes](./images/terraform%20init%20-%20file%20changes.png)
 
-  ![Terraform init file changes](./images/terraform%20init%20-%20file%20changes.png)
-
-1. Now we wnt to make a static check of out configuration to make sure that the configuration at design time is syntactically correct. We do so via the the following command:
+1. Now we want to make a static check of out configuration to make sure that the configuration at design time is syntactically correct. We do so via the the following command:
 
     ```bash
     terraform validate

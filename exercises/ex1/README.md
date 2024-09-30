@@ -2,11 +2,12 @@
 
 In this exercise, we will implement the basic Terraform configuration.
 
-> **Note** - You find the solution for this exercise in the [solutions/ex1](../../solutions/ex1/) folder.
+> [!NOTE]
+> You find the solution for this exercise in the [solutions/ex1](../../solutions/ex1/) folder.
 
 ## Exercise 1.1 - Create the necessary files
 
-After completing these steps you will have created the file layout needed for the Terraform configuration.
+After completing these steps, you will have created the file layout needed for the Terraform configuration.
 
 1. Go to the root directory of this project and create a new directory called `terraform-build`
 1. Switch into the newly created directory `terraform-build`.
@@ -20,7 +21,7 @@ After completing these steps you will have created the file layout needed for th
 
 ## Exercise 1.2 - Create the provider configuration
 
-After completing these steps you will have created the provider configuration.
+After completing these steps, you will have created the provider configuration.
 
 The basic configuration of the Terraform provider for SAP BTP is available in the official documentation located in the [Terraform registry](https://registry.terraform.io/providers/SAP/btp/latest/docs). Looking at the documentation we see that we need to tell Terraform which provider to use and how to authenticate against the SAP BTP. Let's do that
 
@@ -32,7 +33,7 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
         required_providers {
           btp = {
             source  = "SAP/btp"
-            version = "~> 1.6.0"
+            version = "~> 1.7.0"
           }
         }
       }
@@ -44,7 +45,7 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
       }
       ```
 
-      In accordance to the documentation we instruct Terraform to use the provider in version 1.6.0 . We also added the authentication information as a [variable](https://developer.hashicorp.com/terraform/language/values/variables) to increase flexibility. To make the story complete we need to define the variable.
+      In accordance to the documentation we instruct Terraform to use the provider in version 1.7.0 . We also added the authentication information as a [variable](https://developer.hashicorp.com/terraform/language/values/variables) to increase flexibility. To make the story complete we need to define the variable.
 
 1. Open the file `variables.tf`.
 1. Add the following code to the file and save the changes:

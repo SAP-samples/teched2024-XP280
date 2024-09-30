@@ -15,7 +15,7 @@ This session introduces attendees to Terraform as the de-facto standard for infr
 
 ### Scenario 📚
 
-In this session we will walk you through the setup process of the SAP Build portfolio via the Terraform Provider for SAP BTP. At the end of the session you will have the following assets in your SAP BTP trial account ready to use:
+In this session we will walk you through the setup process of the SAP Build portfolio via the Terraform Provider for SAP BTP. At the end of the session, you will have the following assets in your SAP BTP trial account ready to use:
 
 - SAP Build Code
 - SAP Build Process Automation
@@ -26,16 +26,16 @@ Make sure that the following prerequisites are met:
 
 - You have an SAP BTP Trial Account. If you don't have one yet, you can get one [here](https://developers.sap.com/tutorials/hcp-create-trial-account.html).
 - Make sure that your SAP Universal ID is configured correctly. You can find the instructions in [SAP Note 3085908](https://me.sap.com/notes/3085908).
-- The Terraform provider does not support 2FA. Make sure that this options is not enforced for your account.
+- The Terraform provider does not support 2FA. Make sure that this option is not enforced for your account.
 - You need to have a GitHub user. If you don't have one so far, please [sign-up on GitHub](https://github.com/signup) before going through the exercises
 
 ## Exercises
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - Setup Basics of Terraform Configuration](exercises/ex1/)
-- [Exercise 2 - Create a Subaccount](exercises/ex2/)
-- [Exercise 3 - Setup of SAP Build Code](exercises/ex3/)
-- [Exercise 4 - Setup of SAP Build Process Automation](exercises/ex4/)
+- [Getting Started](exercises/ex0/README.md)
+- [Exercise 1 - Setup Basics of Terraform Configuration](exercises/ex1/README.md)
+- [Exercise 2 - Create a Subaccount](exercises/ex2/README.md)
+- [Exercise 3 - Setup of SAP Build Code](exercises/ex3/README.md)
+- [Exercise 4 - Setup of SAP Build Process Automation](exercises/ex4/README.md)
 
 ## Contributing
 
