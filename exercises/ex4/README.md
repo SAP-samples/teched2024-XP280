@@ -133,7 +133,7 @@ After completing these steps, you will have executed the Terraform configuration
 
     As a result we see that Terraform created the resources for SAP Build Process automation. The new output variable also shows up in the `Outputs` section at the end of the log from the Terraform CLI:
 
-       ![Output of terrraform apply](./images/output-terraform-apply.png)
+   ![Output of terrraform apply](./images/output-terraform-apply.png)
 
     A quick cross-check in the SAP BTP cockpit shows us the new resources as part of our subaccount:
 

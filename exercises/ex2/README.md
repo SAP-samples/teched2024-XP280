@@ -105,9 +105,7 @@ After completing these steps, you will have executed the Terraform configuration
 
     This will initialize the setup and download the required provider. You can also check your file system to see that a `.terraform` directory and a file called `.terraform.lock.hcl` have been created.
 
-3. Next we execute another planning:
-
-  ![Terraform init file changes](./images/terraform%20init%20-%20file%20changes.png)
+    ![Terraform init file changes](./images/terraform%20init%20-%20file%20changes.png)
 
 1. Now we want to make a static check of out configuration to make sure that the configuration at design time is syntactically correct. We do so via the the following command:
 
