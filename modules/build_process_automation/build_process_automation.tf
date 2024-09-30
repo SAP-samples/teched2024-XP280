@@ -32,7 +32,7 @@ resource "btp_subaccount_subscription" "build_process_automation" {
 # ------------------------------------------------------------------------------------------------------
 
 # Assign users to Role Collection: ProcessAutomationAdmin
-resource "btp_subaccount_role_collection_assignment" "bpa_admins" {
+resource "btp_subaccount_role_collection_assignment" "build_process_automation_admins" {
   depends_on           = [btp_subaccount_subscription.build_process_automation]
   for_each             = toset(var.process_automation_admins)
   subaccount_id        = var.subaccount_id
@@ -40,7 +40,7 @@ resource "btp_subaccount_role_collection_assignment" "bpa_admins" {
   user_name            = each.value
 }
 
-resource "btp_subaccount_role_collection_assignment" "sbpa_participants" {
+resource "btp_subaccount_role_collection_assignment" "build_process_automation_participants" {
   depends_on           = [btp_subaccount_subscription.build_process_automation]
   for_each             = toset(var.process_automation_participants)
   subaccount_id        = var.subaccount_id
@@ -48,7 +48,7 @@ resource "btp_subaccount_role_collection_assignment" "sbpa_participants" {
   user_name            = each.value
 }
 
-resource "btp_subaccount_role_collection_assignment" "sbpa_developers" {
+resource "btp_subaccount_role_collection_assignment" "build_process_automation_developers" {
   depends_on           = [btp_subaccount_subscription.build_process_automation]
   for_each             = toset(var.process_automation_developers)
   subaccount_id        = var.subaccount_id
