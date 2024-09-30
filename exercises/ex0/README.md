@@ -105,6 +105,23 @@ Validate that the values are set via:
 - Windows: `$env:BTP_USERNAME` and `$env:BTP_PASSWORD`
 - Linux/MacOS/GitHub Codespaces: `echo $BTP_USERNAME` and `echo $BTP_PASSWORD`
 
+## Cleanup SAP BTP Account
+
+We are going to provision several resources like entitlements and subscriptions through the course of this hands-on. As we are working in a trial account there might be limitations e.g., concering the available quotas.
+
+If you created a new trial account, you could delete the existing subaccount from the global account, so that you start from an empty global account
+
+If you have already been working with your SAP BTP trial account, make sure that the enttilements for the following services/application and plan combinations are available:
+
+| Service/Application | Plan |
+|---                  |---
+| build-code          | free
+| sapappstudiotrial   | trial
+| process-automation  | free
+
+> [!WARNING]
+> If you have the plans already in use in a different subaccount the execution of Terraform will fail due to missing available entitlements
+
 ## Summary
 
 You've now prepared your development environment and have all information to finally start using Terraform provider for SAP BTP.

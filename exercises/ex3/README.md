@@ -2,7 +2,8 @@
 
 In this exercise, we will enhance the existing configuration to setup SAP Build Code leveraging a Terraform module.
 
-> **Note** - You find the solution for this exercise in the [solutions/ex3](../../solutions/ex3/) folder.
+> [!NOTE]
+> You find the solution for this exercise in the [solutions/ex3](../../solutions/ex3/) folder.
 
 ## Exercise 3.1 - Become familiar with the SAP Build Code module
 
@@ -96,7 +97,7 @@ Besides that we need to add the new variables for the user that should get the a
      type        = list(string)
      description = "Defines the colleagues who are developers for SAP Business Application Studio"
    }
-   
+
    variable "application_studio_extension_deployer" {
      type        = list(string)
      description = "Defines the colleagues who are extension deployers for SAP Business Application Studio"

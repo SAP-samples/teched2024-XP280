@@ -2,7 +2,8 @@
 
 In this exercise, we will implement the basic Terraform configuration.
 
-> **Note** - You find the solution for this exercise in the [solutions/ex1](../../solutions/ex1/) folder.
+> [!NOTE]
+> You find the solution for this exercise in the [solutions/ex1](../../solutions/ex1/) folder.
 
 ## Exercise 1.1 - Create the necessary files
 

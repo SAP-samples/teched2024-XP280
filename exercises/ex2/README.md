@@ -2,7 +2,8 @@
 
 In this exercise, we will use Terraform to create a subaccount in your global account.
 
-> **Note** - You find the solution for this exercise in the [solutions/ex2](../../solutions/ex2/) folder.
+> [!NOTE]
+> You find the solution for this exercise in the [solutions/ex2](../../solutions/ex2/) folder.
 
 ## Exercise 2.1 - Create the Terraform configuration
 

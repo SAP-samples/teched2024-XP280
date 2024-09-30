@@ -2,7 +2,8 @@
 
 In this exercise, we will we will enhance the existing configuration to setup SAP Build Process Automation leveraging a Terraform module.
 
-> **Note** - You find the solution for this exercise in the [solutions/ex4](../../solutions/ex4/) folder.
+> [!NOTE]
+> You find the solution for this exercise in the [solutions/ex4](../../solutions/ex4/) folder.
 
 ## Exercise 4.1 - Become familiar with the SAP Build Process Automation module
 
