@@ -135,7 +135,7 @@ After completing these steps, you will have executed the Terraform configuration
 
    ![Output of terrraform apply](./images/output-terraform-apply.png)
 
-    When clicking on the 'url_sap_build_code' you should be routed to the SAP Build lobby and you can create your first app or an automation flow:
+    When clicking on the `url_sap_build_code` you should be routed to the SAP Build lobby and you can create your first app or an automation flow:
 
    ![The SAP Build lobby](./images/SAP_Build_lobby.png)
 
