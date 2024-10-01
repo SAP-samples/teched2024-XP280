@@ -2,9 +2,9 @@
 
 To execute the exercises, you have the following options concerning the required tools installed:
 
-- Local installation
-- Usage of the provided dev container
-- Usage of GitHub Codespaces
+- **Recommended** [Usage of the provided dev container](#dev-container-recommended)
+- [Local installation](#local-installation)
+- [Usage of GitHub Codespaces](#github-codespaces)
 
 You find details about the installation of the tools in the following sections
 
