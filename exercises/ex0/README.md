@@ -35,16 +35,25 @@ To use the dev container you must open the folder that contains the cloned repos
 
 If this is not the case execute the following steps:
 
+1. Add a `devcontainer.env` file into the `.devcontainer` directory and add the following two envionment variables into the file:
+
+   ```bash
+   BTP_USERNAME='your SAP BTP username'
+   BTP_PASSWORD='your SAP BTP password'
+   ```
+
+   and save the changes.
+   
 1. Open the command palette in Visual Studio Code:
 
     - Windows / Linux: `Ctrl + Shift + P`
     - Mac: `Cmd + Shift + P`
 
-2. Enter `Dev Containers: Reopen in Container` and confirm with `Enter`.
+1. Enter `Dev Containers: Reopen in Container` and confirm with `Enter`.
 
     ![Search for open in dev container](images/devcontainer-search.png)
 
-3. You will then be asked to select a dev container. Select the `TechEd 2024 XP280` container:
+1. You will then be asked to select a dev container. Select the `TechEd 2024 XP280` container:
 
     ![Select dev container](images/devcontainer-selection.png)
 
