@@ -11,7 +11,7 @@ This repository contains the material for the [SAP TechEd 2024 session XP280 - F
 
 This session introduces attendees to Terraform as the de-facto standard for infrastructure as code. You will get hands-on experience with deploying and provisioning services and app subscriptions.
 
-![Overview Terraform](./assets/Terraform-Overview.png)
+![Overview Terraform](./assets/TerraformOverview.png)
 
 ### Scenario 📚
 
