@@ -27,7 +27,8 @@ Make sure that the following prerequisites are met:
 - You have an SAP BTP Trial Account. If you don't have one yet, you can get one [here](https://developers.sap.com/tutorials/hcp-create-trial-account.html).
 - Make sure that your SAP Universal ID is configured correctly. You can find the instructions in [SAP Note 3085908](https://me.sap.com/notes/3085908).
 - The Terraform provider does not support 2FA. Make sure that this option is not enforced for your account.
-- You need to have a GitHub user. If you don't have one so far, please [sign-up on GitHub](https://github.com/signup) before going through the exercises
+- You need to have a GitHub user. If you don't have one so far, please [sign-up on GitHub](https://github.com/signup) before going through the exercises.
+- For if you intend to use the [recommended 'dev container' tools option](exercises/ex0/README.md#dev-container-recommended) then you must also have [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed on your machine, as well as [Visual Studio Code](https://code.visualstudio.com/) with the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension.
 
 ## Exercises
 
