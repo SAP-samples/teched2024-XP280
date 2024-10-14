@@ -1,4 +1,4 @@
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2024-XP280)](https://api.reuse.software/info/github.com/SAP-samples/teched2024)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2024-XP280)](https://api.reuse.software/info/github.com/SAP-samples/teched2024-XP280)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=841902616&skip_quickstart=true&machine=basicLinux32gb&geo=EuropeWest&devcontainer_path=.devcontainer%2Fdevcontainer.json)
 
 # XP280 - From clicks to code: Managing your SAP BTP infrastructure with Terraform
@@ -52,4 +52,4 @@ Support for the content in this repository is available during the actual time o
 
 ## License
 
-Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file. Detailed information, including third-party components and their licensing/copyright information, is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP-samples/btp-terraform-samples).
+Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file. Detailed information, including third-party components and their licensing/copyright information, is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP-samples/teched2024-XP280).
