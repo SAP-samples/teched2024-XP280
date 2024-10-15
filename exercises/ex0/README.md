@@ -35,7 +35,7 @@ To use the dev container you must open the folder that contains the cloned repos
 
 If this is not the case execute the following steps:
 
-1. Add a `devcontainer.env` file into the `.devcontainer` directory and add the following two envionment variables into the file:
+1. Create a `devcontainer.env` file in the `.devcontainer/` directory (_not_ the `.devcontainer/with_env_file/` directory), add the following two environment variables into the file:
 
    ```bash
    BTP_USERNAME='your SAP BTP username'
@@ -53,7 +53,7 @@ If this is not the case execute the following steps:
 
     ![Search for open in dev container](images/devcontainer-search.png)
 
-1. You will then be asked to select a dev container. Select the `TechEd 2024 XP280` container:
+1. You will then be asked to select a dev container. Select the `TechEd 2024 XP280` container (or the one marked "(with .env file)" if you have created a `devcontainer.env` file as described earlier):
 
     ![Select dev container](images/devcontainer-selection.png)
 
@@ -74,7 +74,7 @@ You can then access the Codespace following these steps:
    [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=841902616&skip_quickstart=true&machine=basicLinux32gb&geo=EuropeWest&devcontainer_path=.devcontainer%2Fdevcontainer.json)
 
 
-1. A congiguration overview will be opened in the browser. You can adjust the region to a location near you (1) and confirm the creation of the Codespace (2):
+1. A configuration overview will be opened in the browser. You can adjust the region to a location near you (1) and confirm the creation of the Codespace (2):
 
     ![Screenshot of Codespace configuration](images/codespace-config.png)
 
@@ -120,7 +120,7 @@ We are going to provision several resources like entitlements and subscriptions 
 
 If you created a new trial account, you could delete the existing subaccount from the global account, so that you start from an empty global account
 
-If you have already been working with your SAP BTP trial account, make sure that the enttilements for the following services/application and plan combinations are available:
+If you have already been working with your SAP BTP trial account, make sure that the entitlements for the following services/application and plan combinations are available:
 
 | Service/Application | Plan |
 |---                  |---
