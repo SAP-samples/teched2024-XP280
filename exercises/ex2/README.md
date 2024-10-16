@@ -123,7 +123,7 @@ After completing these steps, you will have executed the Terraform configuration
     terraform plan -out=tfplan
     ```
 
-    This reuslts in the following output:
+    This results in the following output:
 
     ![Outout terraform plan](./images/output-terraform-plan.png)
 
