@@ -38,12 +38,12 @@ If this is not the case execute the following steps:
 1. Create a `devcontainer.env` file in the `.devcontainer/` directory (_not_ the `.devcontainer/with_env_file/` directory), add the following two environment variables into the file:
 
    ```bash
-   BTP_USERNAME='your SAP BTP username'
-   BTP_PASSWORD='your SAP BTP password'
+   BTP_USERNAME=<your SAP BTP username>
+   BTP_PASSWORD=<your SAP BTP password>
    ```
 
    and save the changes.
-   
+
 1. Open the command palette in Visual Studio Code:
 
     - Windows / Linux: `Ctrl + Shift + P`
