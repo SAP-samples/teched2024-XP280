@@ -9,7 +9,7 @@ terraform.tfvars
 tfplan
 terraform_build
 
-# Any kind of invironment variables
+# Any kind of environment variables
 *.env
 .vscode/settings.json
 output

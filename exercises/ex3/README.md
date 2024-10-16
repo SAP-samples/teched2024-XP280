@@ -1,6 +1,6 @@
 # Exercise 3 - Setup of SAP Build Code
 
-In this exercise, we will enhance the existing configuration to setup SAP Build Code leveraging a Terraform module.
+In this exercise, we will enhance the existing configuration to setup SAP Build Code making use of a Terraform module.
 
 > [!NOTE]
 > You find the solution for this exercise in the [solutions/ex3](../../solutions/ex3/) folder.
@@ -69,13 +69,13 @@ As we have a good impression on what the module does, let us integrate it into o
 
 ## Exercise 3.2 - Configure the SAP Build Code module
 
-After completing these steps, you will have enhanced the configuration to create SAP Build code in your subaccount.
+After completing these steps, you will have enhanced the configuration to create SAP Build Code in your subaccount.
 
 To do so Terraform provides the [module block](https://developer.hashicorp.com/terraform/language/modules/syntax) that allows us to specify a module including its location and the parameters it expects. In our case the module is local so provide the path to the module folder.
 
-Besides that, we need to add the new variables for the user that should get the assignment of the role collections. Let's do this.
+Besides that, we need to add the new variables for the user that should get the assignment of the role collections. Let's do this. The following steps involve the files back in the `terraform_build/` directory.
 
-1. Open the `variables.tf` file, add the following code and safe your changes:
+1. Open the `variables.tf` file, add the following code and save your changes:
 
    ``` terraform
    variable "build_code_admins" {
@@ -117,7 +117,7 @@ Besides that, we need to add the new variables for the user that should get the 
    application_studio_extension_deployer = ["your.email@foo.xyz"]
    ```
 
-   Replace all appearances of `your.email@foo.xyz` with the email address of your SAP BTP user, so that you get the role collections assigned. Safe the changes.
+   Replace all occurrences of `your.email@foo.xyz` with the email address of your SAP BTP user, so that you get the role collections assigned. Save the changes.
 
 1. Next we need to add the module to our configuration to create the SAP Build Code resources. Open the `main.tf` file and add the following code:
 
@@ -136,7 +136,7 @@ Besides that, we need to add the new variables for the user that should get the 
    }
    ```
 
-   We provide the parameters based on our variables as well as the ID of the subaccount `btp_subaccount.sa_build.id`. We get this value from the corresponding resource we created in the previous exercise. Safe your changes.
+   We provide the parameters based on our variables as well as the ID of the subaccount `btp_subaccount.sa_build.id`. We get this value from the corresponding resource we created in the previous exercise. Save your changes.
 
 1. As a final step we propagate the output of the module via the outputs of our configuration. Open the `outputs.tf` file and add the following code:
 
@@ -150,7 +150,7 @@ Besides that, we need to add the new variables for the user that should get the 
    }
    ```
 
-    This maps the output from the module to the output provided from our configuration. We will see the effect when executing the script. Safe your changes and let's give the enhanced configuration a try.
+    This maps the output from the module to the output provided from our configuration. We will see the effect when executing the script. Save your changes and let's give the enhanced configuration a try.
 
 ## Exercise 3.3 - Execute Terraform
 

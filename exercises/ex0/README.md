@@ -109,6 +109,8 @@ The last step in the setup is the export of the environment variables that are r
     export BTP_PASSWORD='<your SAP BTP password>'
     ```
 
+> If you are using the recommended Dev Container option, and have created the `devcontainer.env` file as described, these environment variables should already be set once you have "re-opened in container".
+
 Validate that the values are set via:
 
 - Windows: `$env:BTP_USERNAME` and `$env:BTP_PASSWORD`
