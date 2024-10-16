@@ -9,17 +9,17 @@ In this exercise, we will use Terraform to create a subaccount in your global ac
 
 After completing these steps, you will have defined the configuration for the subaccount creation using Terraform.
 
-To setup a subaccount we must identify the fitting Terraform resource. The official documentation will help us with this.
+To setup a subaccount we must identify the appropriate Terraform resource. The official documentation will help us with this.
 
-As we want to create subaccount the resource we are looking for is the resource [`btp_subaccount`](https://registry.terraform.io/providers/SAP/btp/latest/docs/resources/subaccount). In the documentation we find all the required and optional parameters we can use to configure the subaccount. We want to use the following parameters for our subaccount:
+As we want to create a subaccount the resource we are looking for is [`btp_subaccount`](https://registry.terraform.io/providers/SAP/btp/latest/docs/resources/subaccount). In the documentation we find all the required and optional parameters we can use to configure the subaccount. We want to use the following parameters for our subaccount:
 
-- `name` - the name of the subaccount. As we do not want to hard code the name, we will be suing a variable for this.
+- `name` - the name of the subaccount. As we do not want to hard code the name, we will be using a variable for this.
 - `subdomain` - The value for the subdomain. To keep this unique we want to define this as a combination of a user-provided prefix plus a random UUID. No matter what the user provides as prefix, we will always transform the value to lowercase and replace all `_` with `-`.
 - `region` - the region where the subaccount should be created. We want to be flexible, so we will use a variable for this. To make it easy for the user we ensure that no matter how the variable is provided, we always transform the value to lowercase.
 
 Let's do that.
 
-1. First we define the variables that we later use in the configuration. Open the file `variables.tf` and add the following code to define the three variables for *subaccount name*, *subaccount domain prefix* and *region*:
+1. First we define the variables that we later use in the configuration. Open the file `variables.tf` and add the following code to define the three variables for *subaccount domain prefix*, *subaccount name* and *region*:
 
       ```terraform
       variable "subaccount_domain_prefix" {
@@ -41,13 +41,13 @@ Let's do that.
       }
       ```
 
-      It is best practice to provided a meaningful description for the variables. As you can see we also provided *default values* for the variables. Feel free to change them to your liking. Safe your changes once you are finished.
+      It is best practice to provided a meaningful description for the variables. As you can see we also provided *default values* for the variables. Feel free to change them to your liking. Save your changes once you are finished.
 
       As we have defined the necessary input, we can now start with the actual configuration.
 
-1. As we need to construct the value of the subaccount domain we must leverage a few features of Terraform to achieve this namely:
+1. As we need to construct the value of the subaccount domain we must use a few features of Terraform to achieve this, namely:
 
-    - Use a [local variable](https://developer.hashicorp.com/terraform/language/values/locals) to construct the value based on the input.
+    - A [local variable](https://developer.hashicorp.com/terraform/language/values/locals) to construct the value based on the input.
     - The [`random_uuid` resource](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/uuid) to make the value unique.
     - Two Terraform built-in functions to [replace](https://developer.hashicorp.com/terraform/language/functions/replace) the `_` with `-` and to make the value all [lower](https://developer.hashicorp.com/terraform/language/functions/lower) case.
 
@@ -73,7 +73,7 @@ Let's do that.
 
     We are using the variables we defined before and the local variable to fill the required parameters of the resource. We are also using the `lower` function inline to ensure that the region is always in lowercase.
 
-    Safe your changes.
+    Save your changes.
 
 ## Exercise 2.2 - Execute Terraform
 
@@ -92,14 +92,14 @@ After completing these steps, you will have executed the Terraform configuration
     terraform fmt
     ```
 
-   This command executes the formating of your configuration so that it is complaint with the Terraform best practices.
+   This command executes the formatting of your configuration so that it is compliant with the Terraform best practices.
 
 1. As we are using Terraform for the first time, we must initialize the setup. We do so via the command:
 
     ```bash
     terraform init
     ```
-    Your should see the following output in the terminal:
+    Your should see the output similar to the following in the terminal:
 
     ![Output of the Terraform init command](./images/terraform-init-output.png)
 
@@ -107,7 +107,7 @@ After completing these steps, you will have executed the Terraform configuration
 
     ![Terraform init file changes](./images/terraform%20init%20-%20file%20changes.png)
 
-1. Now we want to make a static check of out configuration to make sure that the configuration at design time is syntactically correct. We do so via the the following command:
+1. Now we want to make a static check of our configuration to make sure that the configuration at design time is syntactically correct. We do so via the the following command:
 
     ```bash
     terraform validate
@@ -127,7 +127,7 @@ After completing these steps, you will have executed the Terraform configuration
 
     ![Outout terraform plan](./images/output-terraform-plan.png)
 
-    As expected the subaccount will be created. We saved the plan via the `-out` parameter to a file for using it in the apply. As the result matches our expectations we apply the configuration:
+    As expected it shows that the subaccount will be created. We saved the plan via the `-out` parameter to a file for using it in the apply. As the result matches our expectations we apply the configuration:
 
     ```bash
     terraform apply tfplan

@@ -10,7 +10,6 @@ In this exercise, we will implement the basic Terraform configuration.
 After completing these steps, you will have created the file layout needed for the Terraform configuration.
 
 1. Go to the root directory of this project and create a new directory called `terraform-build`
-1. Switch into the newly created directory `terraform-build`.
 1. Navigate into the directory `terraform-build`.
 1. Create the following files inside of the directory:
     - `main.tf` - this file will contain the main Terraform configuration
@@ -62,7 +61,7 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
     globalaccount = "<your-global-account-subdomain>"
     ```
 
-    Enter the subdomain value of *your* global account which has the format `xxxxxxxxtrial-ga` and safe your changes.
+    Enter the subdomain value of *your* global account which has the format `xxxxxxxxtrial-ga` and save your changes.
 
     You find the value in the SAP BTP Cockpit in the account explorer:
 
