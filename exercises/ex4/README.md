@@ -1,6 +1,6 @@
 # Exercise 4 - Setup of SAP Build Process Automation
 
-In this exercise, we will enhance the existing configuration to setup SAP Build Process Automation leveraging a Terraform module.
+In this exercise, we will enhance the existing configuration to setup SAP Build Process Automation using a Terraform module.
 
 > [!NOTE]
 > You find the solution for this exercise in the [solutions/ex4](../../solutions/ex4/) folder.
@@ -15,7 +15,7 @@ As for the SAP Build Code scenario in the previous step, the setup comprises sev
 - Subscription to the SAP Build Process Automation application.
 - Assignment of the role collections to the users to access the application.
 
-As before we leverage a module for these tasks that is available in the folder `modules/build_process_automation`. The structure corresponds to the previous exercise. Take a few minutes to review the files in the module. Use this as a knowledge check from the previous exercise.
+As before we use a module for these tasks that is available in the folder `modules/build_process_automation`. The structure corresponds to the previous exercise. Take a few minutes to review the files in the module. Use this as a knowledge check from the previous exercise.
 
 Once finished let us start to integrate the module into our main configuration.
 
@@ -23,7 +23,7 @@ Once finished let us start to integrate the module into our main configuration.
 
 After completing these steps, you will have enhanced the configuration to setup SAP Build Process Automation.
 
-1. As the new module comes with a new variables, we must add them to our configuration. Open the `variables.tf` file, add the following code and safe your changes:
+1. As the new module comes with new variables, we must add them to our configuration. Open the `variables.tf` file, add the following code and save your changes:
 
    ``` terraform
    variable "process_automation_admins" {
@@ -53,7 +53,7 @@ After completing these steps, you will have enhanced the configuration to setup 
    process_automation_participants = ["your.email@foo.xyz"]
    ```
 
-   Replace all appearances of `your.email@foo.xyz` with the email address of your SAP BTP user and safe the changes.
+   Replace all occurrences of `your.email@foo.xyz` with the email address of your SAP BTP user and save the changes.
 
 1. Next we need to add the module to our configuration. Open the `main.tf` file and add the following code:
 
@@ -70,7 +70,7 @@ After completing these steps, you will have enhanced the configuration to setup 
    }
    ```
 
-   As in the previous exercise We provided the parameters based on our variables and the ID of the subaccount `btp_subaccount.sa_build.id`. Safe your changes.
+   As in the previous exercise We provided the parameters based on our variables and the ID of the subaccount `btp_subaccount.sa_build.id`. Save your changes.
 
 1. As final step we propagate the output of the module via the outputs of our configuration. Open the `outputs.tf` file and add the following code:
 
@@ -80,7 +80,7 @@ After completing these steps, you will have enhanced the configuration to setup 
    }
    ```
 
-    Safe your changes and do ... yes the formatting exercise via:
+    Save your changes and do ... yes the formatting exercise via:
 
     ```bash
     terraform fmt
@@ -118,20 +118,20 @@ After completing these steps, you will have executed the Terraform configuration
     terraform plan -out=tfplan
     ```
 
-    As we already have a resource created on SAP BTP this step is important to validate if the configuration is acting as expected. We also saved the plan to a file for using it later.
+    As we already have a resource created on SAP BTP this step is important to validate if the configuration is acting as expected. We also saved the plan to a file for later use.
 
     Looking at the output, this looks like what we expected. Some resources will be addedd, but no changes to existing ones and no deletions:
 
     ![Output of terrraform plan](./images/output-terraform-plan.png)
 
 
-4. As the planning looked good, let's apply the plan via (this might take a bit):
+4. As the planning looked good, let's apply the plan (this might take a bit):
 
     ```bash
     terraform apply tfplan
     ```
 
-    As a result we see that Terraform created the resources for SAP Build Process automation. The new output variable also shows up in the `Outputs` section at the end of the log from the Terraform CLI:
+    As a result we see that Terraform created the resources for SAP Build Process Automation. The new output variable also shows up in the `Outputs` section at the end of the log from the Terraform CLI:
 
    ![Output of terrraform apply](./images/output-terraform-apply.png)
 
