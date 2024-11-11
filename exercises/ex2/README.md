@@ -41,7 +41,7 @@ Let's do that.
       }
       ```
 
-      It is best practice to provided a meaningful description for the variables. As you can see we also provided *default values* for the variables. Feel free to change them to your liking. Save your changes once you are finished.
+      It is best practice to provide a meaningful description for the variables. As you can see we also provided *default values* for the variables. Feel free to change them to your liking. Save your changes once you are finished.
 
       As we have defined the necessary input, we can now start with the actual configuration.
 
