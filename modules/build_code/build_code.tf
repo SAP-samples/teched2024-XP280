@@ -28,7 +28,6 @@ resource "btp_subaccount_entitlement" "build_code" {
   subaccount_id = var.subaccount_id
   service_name  = "build-code"
   plan_name     = "free"
-  amount        = 1
 }
 # Subscribe
 resource "btp_subaccount_subscription" "build_code" {
