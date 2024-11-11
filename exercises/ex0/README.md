@@ -91,7 +91,7 @@ You can then access the Codespace following these steps:
 
 ## Exporting environment variables
 
-The last step in the setup is the export of the environment variables that are required to authenticate against the Terraform provider for SAP BTP. Export the following environment variables:
+The last step in the setup is the export of the environment variables that are required to authenticate against the Terraform provider for SAP BTP. Export the following environment variables (ensuring that, as shown, the password value is enclosed in single quotes - this is because the shell may interpret special characters in your password and the value will then not be correct):
 
 - Windows:
 
