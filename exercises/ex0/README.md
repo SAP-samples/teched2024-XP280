@@ -31,18 +31,16 @@ As an alternative to the local installation, you can use the provided dev contai
 
 To start a dev container Docker must be running on your machine.
 
-To use the dev container you must open the folder that contains the cloned repository in Visual Studio Code. You will be asked if you want to reopen the folder in the dev container. Confirm this.
+To use the dev container you must open the folder that contains the cloned repository in Visual Studio Code. 
 
-If this is not the case execute the following steps:
+You will be then asked if you want to reopen the folder in the dev container. Don't do that yet. BEFORE YOU DO, you should store your account details for the container environment by creating a `devcontainer.env` file in the `.devcontainer/` directory (_not_ the `.devcontainer/with_env_file/` directory), with the following two environment variables defined in the file, as shown:
 
-1. Create a `devcontainer.env` file in the `.devcontainer/` directory (_not_ the `.devcontainer/with_env_file/` directory), add the following two environment variables into the file:
+```bash
+BTP_USERNAME=<your SAP BTP username>
+BTP_PASSWORD=<your SAP BTP password>
+```
 
-   ```bash
-   BTP_USERNAME=<your SAP BTP username>
-   BTP_PASSWORD=<your SAP BTP password>
-   ```
-
-   and save the changes.
+Now you can (re)open the folder in the dev container:
 
 1. Open the command palette in Visual Studio Code:
 
@@ -53,7 +51,7 @@ If this is not the case execute the following steps:
 
     ![Search for open in dev container](images/devcontainer-search.png)
 
-1. You will then be asked to select a dev container. Select the `TechEd 2024 XP280` container (or the one marked "(with .env file)" if you have created a `devcontainer.env` file as described earlier):
+1. You will then be asked to select a dev container. Select the `TechEd 2024 XP280` container - the one marked "(with .env file)" if you have created a `devcontainer.env` file as described earlier):
 
     ![Select dev container](images/devcontainer-selection.png)
 
