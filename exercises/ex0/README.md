@@ -87,7 +87,7 @@ You can then access the Codespace following these steps:
     ![Screenshot of GitHub Codespace view on the repository Terraform samples](images/codespace-screen.png)
 
 > [!IMPORTANT]
-> GitHub codespaces are free for a certain amount of time per month. For the hands-on session the free time is more than enough. **Don't forget to delete your codespace again after the hands-on session!**
+> GitHub codespaces are [free for a certain amount of time per month](https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts). For the hands-on session the free time is more than enough. **Don't forget to delete your codespace again after the hands-on session!**
 
 ## Exporting environment variables
 
