@@ -77,14 +77,13 @@ Let's do that.
 
 ## Exercise 2.2 - Execute Terraform
 
-After completing these steps, you will have executed the Terraform configuration and successfully created a subaccount in your global account. To execute Terraform open a new Terminal window to enter the Terraform commands:
+After completing these steps, you will have executed the Terraform configuration and successfully created a subaccount in your global account. 
 
-1. In the terminal change to the `terraform_build` directory that you already created.
+Ideally you need to be in the same Terminal window you used before.
 
-    ```bash
-    cd terraform_build
-    ```
+> This is especially the case if you are not using a `devcontainer.env` file in conjunction with a [dev container](../ex0/README.md#dev-container-recommended), and have [exported the `BTP_USERNAME` and `BTP_PASSWORD` environment variables](../ex0/README.md#exporting-environment-variables) in the shell session. If you do have to start a new Terminal window, make sure you export the two environment variables again.
 
+1. Ensure you're in the `terraform_build/` directory that you already created.
 
 1. First we want to make sure that everything is properly formated. The Terraform CLI supports us with this.
 
