@@ -9,8 +9,8 @@ In this exercise, we will implement the basic Terraform configuration.
 
 After completing these steps, you will have created the file layout needed for the Terraform configuration.
 
-1. Go to the root directory of this project and create a new directory called `terraform-build`
-1. Navigate into the directory `terraform-build`.
+1. Go to the root directory of this project and create a new directory called `terraform_build`
+1. Navigate into the directory `terraform_build`.
 1. Create the following files inside of the directory:
     - `main.tf` - this file will contain the main Terraform configuration
     - `provider.tf` - this file will contain the provider configuration
