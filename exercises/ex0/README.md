@@ -93,18 +93,18 @@ You can then access the Codespace following these steps:
 
 The last step in the setup is the export of the environment variables that are required to authenticate against the Terraform provider for SAP BTP. Export the following environment variables (ensuring that, as shown, the password value is enclosed in single quotes - this is because the shell may interpret special characters in your password and the value will then not be correct):
 
+- Linux/MacOS/Dev Containers/GitHub Codespaces:
+
+    ```bash
+    export BTP_USERNAME=<your SAP BTP username>
+    export BTP_PASSWORD='<your SAP BTP password>'
+    ```
+
 - Windows:
 
     ```pwsh
     $env:BTP_USERNAME=<your SAP BTP username>
     $env:BTP_PASSWORD='<your SAP BTP password>'
-    ```
-
-- Linux/MacOS/GitHub Codespaces:
-
-    ```bash
-    export BTP_USERNAME=<your SAP BTP username>
-    export BTP_PASSWORD='<your SAP BTP password>'
     ```
 
 > If you are using the recommended Dev Container option, and have created the `devcontainer.env` file as described, these environment variables should already be set once you have "re-opened in container".
