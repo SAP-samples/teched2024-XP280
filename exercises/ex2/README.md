@@ -85,7 +85,7 @@ Ideally you need to be in the same Terminal window you used before.
 
 1. Ensure you're in the `terraform_build/` directory that you already created.
 
-1. First we want to make sure that everything is properly formated. The Terraform CLI supports us with this.
+1. First we want to make sure that everything is properly formatted. The Terraform CLI supports us with this.
 
     ```bash
     terraform fmt
