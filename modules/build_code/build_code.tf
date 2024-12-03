@@ -35,6 +35,10 @@ resource "btp_subaccount_subscription" "build_code" {
   app_name      = "build-code"
   plan_name     = "free"
   depends_on    = [btp_subaccount_entitlement.build_code]
+  timeouts = {
+    create = "20m"
+    delete = "15m"
+  }
 }
 # Create role collection "Build Code Administrator"
 resource "btp_subaccount_role_collection" "build_code_administrator" {

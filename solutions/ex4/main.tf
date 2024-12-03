@@ -22,7 +22,7 @@ resource "btp_subaccount" "sa_build" {
 module "build_code" {
   source = "../../modules/build_code/"
 
-  subaccount_id  = btp_subaccount.sa_build.id
+  subaccount_id = btp_subaccount.sa_build.id
 
   application_studio_admins             = var.application_studio_admins
   application_studio_developers         = var.application_studio_developers
@@ -38,7 +38,7 @@ module "build_code" {
 module "build_process_automation" {
   source = "../../modules/build_process_automation"
 
-  subaccount_id  = btp_subaccount.sa_build.id
+  subaccount_id = btp_subaccount.sa_build.id
 
   process_automation_admins       = var.process_automation_admins
   process_automation_developers   = var.process_automation_developers

@@ -1,5 +1,5 @@
 variable "globalaccount" {
-  type    = string
+  type = string
 }
 
 variable "subaccount_domain_prefix" {
