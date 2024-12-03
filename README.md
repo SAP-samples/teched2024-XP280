@@ -42,6 +42,11 @@ Make sure that the following prerequisites are met:
 
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
 
+## Further Reading
+
+* [May I introduce you to the … Terraform Exporter for SAP BTP](https://www.linkedin.com/pulse/may-i-introduce-you-terraform-exporter-sap-btp-christian-lechner-lgzif/)
+* [Terraform Provider for Cloud Foundry v1.1.0 - What's New](https://www.linkedin.com/pulse/terraform-provider-cloud-foundry-v110-whats-new-debaditya-ray-xyxyc/)
+
 ## Code of Conduct
 
 Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples/.github/blob/main/CODE_OF_CONDUCT.md).
