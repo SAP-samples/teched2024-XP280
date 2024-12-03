@@ -25,6 +25,10 @@ resource "btp_subaccount_subscription" "build_process_automation" {
   app_name      = "process-automation"
   plan_name     = "free"
   depends_on    = [btp_subaccount_entitlement.build_process_automation]
+  timeouts = {
+    create = "20m"
+    delete = "15m"
+  }
 }
 
 # ------------------------------------------------------------------------------------------------------
