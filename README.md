@@ -42,10 +42,12 @@ Make sure that the following prerequisites are met:
 
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
 
-## Further Reading
+## Further Information
 
-* [May I introduce you to the … Terraform Exporter for SAP BTP](https://www.linkedin.com/pulse/may-i-introduce-you-terraform-exporter-sap-btp-christian-lechner-lgzif/)
-* [Terraform Provider for Cloud Foundry v1.1.0 - What's New](https://www.linkedin.com/pulse/terraform-provider-cloud-foundry-v110-whats-new-debaditya-ray-xyxyc/)
+- [Terraform Provider for SAP BTP](https://registry.terraform.io/providers/SAP/terraform/latest/docs)
+- [Terraform Provider for Cloud Foundry](https://registry.terraform.io/providers/cloudfoundry/cloudfoundry/latest/docs)
+- SAP Learning [Getting Started with Terraform on SAP BTP](https://learning.sap.com/learning-journeys/getting-started-with-terraform-on-sap-btp)
+
 
 ## Code of Conduct
 
