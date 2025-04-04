@@ -103,7 +103,7 @@ The last step in the setup is the export of the environment variables that are r
 - Windows:
 
     ```pwsh
-    $env:BTP_USERNAME=<your SAP BTP username>
+    $env:BTP_USERNAME='<your SAP BTP username>'
     $env:BTP_PASSWORD='<your SAP BTP password>'
     ```
 
