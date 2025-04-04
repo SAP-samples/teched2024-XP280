@@ -25,6 +25,8 @@ You can install the required tools locally on your machine. The following tools 
 - [Terraform CLI](https://developer.hashicorp.com/terraform/install?product_intent=terraform)
 - An editor of your choice. We recommend [Visual Studio Code](https://code.visualstudio.com/Download) with the [Terraform extension](https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform).
 
+Now continue with chapter "Exporting environment variables".
+
 ## Dev Container (recommended)
 
 As an alternative to the local installation, you can use the provided dev container that contains all required tools. This requires that you have [Docker](https://www.docker.com/products/docker-desktop) installed on your machine. In addition you need the dev container extension for Visual Studio Code. You can find detailed instructions about the setup [here](https://code.visualstudio.com/docs/devcontainers/containers#_getting-started).
