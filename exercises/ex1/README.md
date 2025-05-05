@@ -32,7 +32,7 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
         required_providers {
           btp = {
             source  = "SAP/btp"
-            version = "~> 1.11.0"
+            version = "~> 1.12.0"
           }
         }
       }
@@ -44,7 +44,7 @@ The basic configuration of the Terraform provider for SAP BTP is available in th
       }
       ```
 
-      In accordance to the documentation we instruct Terraform to use the provider in version 1.11.0 . We also added the authentication information as a [variable](https://developer.hashicorp.com/terraform/language/values/variables) to increase flexibility. To make the story complete we need to define the variable.
+      In accordance to the documentation we instruct Terraform to use the provider in version 1.12.0 . We also added the authentication information as a [variable](https://developer.hashicorp.com/terraform/language/values/variables) to increase flexibility. To make the story complete we need to define the variable.
 
 1. Open the file `variables.tf`.
 1. Add the following code to the file and save the changes:
