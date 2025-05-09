@@ -120,7 +120,10 @@ Validate that the values are set via:
 
 We are going to provision several resources like entitlements and subscriptions through the course of this hands-on. As we are working in a trial account there might be limitations e.g., concering the available quotas.
 
-If you created a new trial account, you could delete the existing subaccount from the global account, so that you start from an empty global account
+If you created a new trial account, you could delete the existing subaccount from the global account, so that you start from an empty global account.
+
+> [!TIP]
+> Make sure that you have the option `Enable Subaccount Force Deletion` enabled to delete the subaccount in one run. This setting is available in the "Global Account Settings" section "Subaccounts".
 
 If you have already been working with your SAP BTP trial account, make sure that the entitlements for the following services/application and plan combinations are available:
 
